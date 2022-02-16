@@ -1,6 +1,8 @@
  # Dublin Inn Real Estate
 
-> ***Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination. 
+> ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
+
+> **For educational purposes only.
 
 ## Briefing
 
