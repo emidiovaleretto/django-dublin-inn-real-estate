@@ -47,3 +47,13 @@ In the system, there will be the following user functionalities:
     - can log in and out of the application.
     - manage his/her own profile.
     - form to search for properties.
+
+# User Interface UI
+
+## Skeleton
+
+ The wireframes were created in [Figma](https://www.figma.com/).
+
+### Desktop Homepage
+
+<img src="./readme-files/wireframes/desktop_homepage.jpg" width="600" height="2412">
