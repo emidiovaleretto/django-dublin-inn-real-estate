@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Poppins:wght@400;600&display=swap');
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -59,6 +61,8 @@ img {
     padding: 16px 0;
     font-size: 1rem;
     position: relative;
+    font-family: "Poppins";
+    font-weight: 400;
 }
 
 .header-menu a::after {
@@ -123,6 +127,8 @@ img {
     font-size: 4rem;
     line-height: 1.125;
     color: #2E2E2E;
+    font-family: "Poppins";
+    font-weight: 600;
 }
 
 .intro h1 span {
@@ -134,6 +140,8 @@ img {
     font-size: 1.5rem;
     line-height: 1.5;
     color: #717171;
+    font-family: "Fira Sans";
+    font-weight: 400;
 }
 
 .intro a {
@@ -146,7 +154,8 @@ img {
     color: #ffffff;
     font-size: 1.125rem;
     line-height: 1.33;
-    font-weight: bold;
+    font-family: "Poppins";
+    font-weight: 600;
 }
 
 .intro a:hover {
@@ -203,5 +212,10 @@ button {
     background-color: #095831;
     color: #ffffff;
     border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
     text-transform: uppercase;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
