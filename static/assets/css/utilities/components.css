@@ -7,9 +7,6 @@
     text-transform: uppercase;
     color: #ffffff;
     font-size: 1.125rem;
-    line-height: 1.33;
-    font-family: "Poppins";
-    font-weight: 600;
 }
 
 .button:hover {

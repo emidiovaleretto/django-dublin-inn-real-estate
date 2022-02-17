@@ -1,0 +1,84 @@
+.font-p-xxl {
+    font-size: 4rem;
+    line-height: 1.125;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.font-p-xl {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.font-p-l {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+.font-f-l {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Fira Sans";
+    font-weight: 400;
+}
+
+.font-f-l-b {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Fira Sans";
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.font-p-m {
+    font-size: 1.125rem;
+    line-height: 1.33;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+.font-p-m-b {
+    font-size: 1.125rem;
+    line-height: 1.33;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.font-f-m {
+    font-size: 1.125rem;
+    line-height: 1.33;
+    font-family: "Fira Sans";
+    font-weight: 500;
+}
+
+.font-p-s {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+.font-f-s {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Fira Sans";
+    font-weight: 400;
+}
+
+.font-f-xs {
+    font-size: 0.875rem;
+    line-height: 1.43;
+    font-family: "Fira Sans";
+    font-weight: 400;
+}
+
+.font-p-xs {
+    font-size: 0.75rem;
+    line-height: 1.33;
+    font-family: "Poppins";
+    font-weight: 600;
+}

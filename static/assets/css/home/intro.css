@@ -22,11 +22,7 @@
 
 .intro h1 {
     margin-bottom: 32px;
-    font-size: 4rem;
-    line-height: 1.125;
     color: #2E2E2E;
-    font-family: "Poppins";
-    font-weight: 600;
 }
 
 .intro h1 span {
@@ -35,11 +31,7 @@
 
 .intro p {
     margin-bottom: 20px;
-    font-size: 1.5rem;
-    line-height: 1.5;
     color: #717171;
-    font-family: "Fira Sans";
-    font-weight: 400;
 }
 
 .intro-form {
@@ -59,9 +51,8 @@
 .intro-form p {
     margin-left: 16px;
     margin-bottom: 12px;
+    font-weight: 400;
     color: #2E2E2E;
-    font-size: 1.25rem;
-    line-height: 1.5;
 }
 
 /* Search Form */
