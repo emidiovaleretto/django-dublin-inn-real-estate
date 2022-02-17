@@ -27,3 +27,23 @@ The company's business team gave me a report on the features that the CEO wants:
 > 5. Accessibility considerations are taken throughout the site
 > 6. A form where the user can filter the search by properties, passing information such as location, property type and price range (*This functionality does not exist in the current application*).
 > 7. A functionality where the user can schedule a visit to one or more properties and a dashboard where he can view, edit and/or delete a visit (*This functionality does not exist in the current application*).
+
+# Business Rules
+
+The application's administrative functions are intended to manage what each user can do within the system. Permissions such as adding, editing or removing a property, for example, should under no circumstances be given to the user of the application. Such functionalities must be assigned exclusively to the administrator.
+
+In the system, there will be the following user functionalities:
+
+   - Admin: has permission in all areas of the system.
+   - Users: can edit your own profile like change profile picture or change password. The user can search for properties by **location**, **type** of property (apartment, house, studio, etc.), **price range**, in addition to being able to schedule visits, edit date and time of visit (according to availability) and you can also cancel a certain scheduled visit.
+
+## Screens
+
+- Admin:
+    - will be able to manage users.
+    - Add/Edit/Remove properties.
+    - View all screens users can view as well.
+- Users:
+    - can log in and out of the application.
+    - manage his/her own profile.
+    - form to search for properties.
