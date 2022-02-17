@@ -26,7 +26,7 @@ img {
 }
 
 .container {
-    max-width: 1160px;
+    max-width: 1080px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -83,6 +83,7 @@ img {
     font-weight: 500;
     background-color: #ffffff;
     border-radius: 4px;
+    margin-left: 60px;
 }
 
 .header-menu .menu-btn::after {
