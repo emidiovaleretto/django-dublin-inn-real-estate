@@ -1,0 +1,26 @@
+.feature-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-home {
+    color: var(--primary-color-5);
+    position: relative;
+}
+
+.link-home::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-color-5);
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.link-home:hover::after {
+    width: 100%;
+}
