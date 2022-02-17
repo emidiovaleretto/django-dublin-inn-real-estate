@@ -1,5 +1,6 @@
 .intro-bg {
-    box-shadow: inset 0 -120px #F7F7F7;
+    box-shadow: inset 0 -120px var(--gray-1);
+    margin-bottom: 200px;
 }
 
 .intro {
@@ -20,18 +21,18 @@
     border-radius: 0 0 4px 4px;
 }
 
-.intro h1 {
+h2 {
     margin-bottom: 32px;
-    color: #2E2E2E;
+    color: var(--gray-10);
 }
 
-.intro h1 span {
-    color: #095831;
+h2 span {
+    color: var(--primary-color-5);
 }
 
 .intro p {
     margin-bottom: 20px;
-    color: #717171;
+    color: var(--gray-7);
 }
 
 .intro-form {
@@ -39,7 +40,7 @@
     flex-wrap: wrap;
     width: 900px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 4px;
     position: absolute;
     bottom: 24px;
@@ -52,7 +53,7 @@
     margin-left: 16px;
     margin-bottom: 12px;
     font-weight: 400;
-    color: #2E2E2E;
+    color: var(--gray-10);
 }
 
 /* Search Form */
@@ -68,7 +69,7 @@
 input[type=text] {
     margin-left: 16px;
     padding: 16px;
-    background: #F7F7F7;
+    background: var(--gray-1);
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
     border: none;
@@ -76,14 +77,11 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    border: 1px solid rgba(9, 88, 49, 0.6);
+    border: none;
 }
 
 button.button {
     margin-left: 24px;
-    font-size: 0.875rem;
-    font-family: "Fira Sans";
-    font-weight: 500;
     border: none;
     cursor: pointer;
 }

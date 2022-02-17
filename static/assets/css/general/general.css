@@ -1,11 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F7F7F7;
+    background-color: var(--gray-1);
     height: 2000px;
 }
 
 h1,
+h2,
 ul,
 p {
     margin: 0;

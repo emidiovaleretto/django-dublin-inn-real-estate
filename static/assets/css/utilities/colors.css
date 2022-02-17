@@ -16,6 +16,7 @@
     --white: #FFFFFF;
 
     /* Primary color */
+    --primary-color-6: #054425;
     --primary-color-5: #095831;
     --primary-color-4: #03673D;
     --primary-color-3: #097E4D;
@@ -23,7 +24,7 @@
     --primary-color-1: #169B62;
     
     /* Detail color */
-    --primary-color-6: #FF9900;
+    --primary-color-7: #FF9900;
 
     /* Cancel button */
     --red-button: #8F0000;
