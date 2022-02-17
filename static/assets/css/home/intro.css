@@ -1,0 +1,98 @@
+.intro-bg {
+    box-shadow: inset 0 -120px #F7F7F7;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+    position: relative;
+}
+
+.intro-content {
+    align-self: end;
+    padding-bottom: 200px;
+}
+
+.intro img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 4px 4px;
+}
+
+.intro h1 {
+    margin-bottom: 32px;
+    font-size: 4rem;
+    line-height: 1.125;
+    color: #2E2E2E;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.intro h1 span {
+    color: #095831;
+}
+
+.intro p {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #717171;
+    font-family: "Fira Sans";
+    font-weight: 400;
+}
+
+.intro-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 24px;
+    left: 60px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+.intro-form p {
+    margin-left: 16px;
+    margin-bottom: 12px;
+    color: #2E2E2E;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Search Form */
+
+.form-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type=text] {
+    margin-left: 16px;
+    padding: 16px;
+    background: #F7F7F7;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 1px solid rgba(9, 88, 49, 0.6);
+}
+
+button.button {
+    margin-left: 24px;
+    font-size: 0.875rem;
+    font-family: "Fira Sans";
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
