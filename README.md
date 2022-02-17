@@ -56,4 +56,4 @@ In the system, there will be the following user functionalities:
 
 ### Desktop Homepage
 
-<img src="./readme-files/wireframes/desktop_homepage.jpg" width="800" height="3216">
+<img src="./readme-files/wireframes/desktop_homepage.jpg" width="560" height="2412">
