@@ -55,7 +55,7 @@ img {
     display: inline-block;
     color: #ffffff;
     padding: 16px 0;
-    font-size: 1.125rem;
+    font-size: 1rem;
     position: relative;
 }
 
@@ -78,7 +78,7 @@ img {
     padding: 12px 16px;
     color: #095831;
     text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7;
     font-weight: 500;
     background-color: #ffffff;
@@ -91,7 +91,7 @@ img {
 }
 
 .header-menu .menu-btn:hover {
-    background-color: #F7F7F7;
+    background-color: #EDEDED;
 }
 
 .intro {
@@ -107,7 +107,7 @@ img {
 
 .intro h1 {
     margin-bottom: 32px;
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 1.125;
     color: #2E2E2E;
 }
@@ -118,7 +118,7 @@ img {
 
 .intro p {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.5;
     color: #717171;
 }
