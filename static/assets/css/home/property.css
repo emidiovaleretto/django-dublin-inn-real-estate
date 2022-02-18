@@ -82,6 +82,10 @@
 
 
 @media (max-width: 800px) {
+    .property-list h2 {
+        font-size: 3rem;
+    }
+
     .property-list {
         padding-bottom: 60px;
     }
