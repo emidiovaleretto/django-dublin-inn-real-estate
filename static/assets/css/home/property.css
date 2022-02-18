@@ -10,7 +10,6 @@
 }
 
 .link-home {
-    color: var(--primary-color-5);
     position: relative;
 }
 
@@ -70,8 +69,4 @@
     display: flex;
     gap: 6px;
     align-items: center;
-}
-
-.icons span {
-    color: var(--gray-8);
 }

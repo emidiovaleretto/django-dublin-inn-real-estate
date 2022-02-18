@@ -23,16 +23,10 @@
 
 h2 {
     margin-bottom: 32px;
-    color: var(--gray-10);
-}
-
-h2 span {
-    color: var(--primary-color-5);
 }
 
 .intro p {
     margin-bottom: 20px;
-    color: var(--gray-7);
 }
 
 .intro-form {
@@ -53,7 +47,6 @@ h2 span {
     margin-left: 16px;
     margin-bottom: 12px;
     font-weight: 400;
-    color: var(--gray-10);
 }
 
 /* Search Form */
