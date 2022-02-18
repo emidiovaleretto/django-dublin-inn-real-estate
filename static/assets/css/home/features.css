@@ -8,15 +8,32 @@
 
 .features ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     align-items: center;
     padding: 0 20px;
 }
 
+.features li {
+    flex: 1;
+    min-width: 180px;
+}
+
 .features img {
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 }
 
 .features p {
     text-align: center;
+}
+
+
+@media (max-width: 800px) {
+    .features h2 {
+        font-size: 3rem;
+    }
+
+    .features ul {
+        gap: 80px;
+    }
 }
