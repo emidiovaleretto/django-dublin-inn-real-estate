@@ -79,6 +79,14 @@ h2 span {
     background: url("../../img/icons/icon-budget.svg") no-repeat right 20px top 15px;
 }
 
+input[type=text]:focus::placeholder {
+    color: transparent;
+}
+
+input[type=text]:focus {
+    background-image: none;
+  }
+
 input[type=text] {
     margin-left: 16px;
     padding: 16px;

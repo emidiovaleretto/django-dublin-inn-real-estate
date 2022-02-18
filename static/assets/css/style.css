@@ -14,4 +14,5 @@
 
 /* Layout */
 @import "./home/intro.css";
+@import "./home/property.css";
 @import "./home/features.css";
