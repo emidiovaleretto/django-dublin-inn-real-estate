@@ -12,3 +12,22 @@
 .button:hover {
     background-color: var(--primary-color-6);
 }
+
+.link {
+    display: inline-block;
+    color: var(--primary-color-5);
+    font: 600 1.5rem/1.33 "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+.link::after {
+    content:'';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-color-5);
+}
+
+.link:hover {
+    color: var(--primary-color-6);
+}

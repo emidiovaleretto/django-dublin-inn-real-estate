@@ -53,3 +53,40 @@
 .keys-benefits p {
     margin-bottom: 80px;
 }
+
+
+@media (max-width: 800px) {
+    .keys-bg {
+        box-shadow: initial;
+    }
+
+    .keys {
+        grid-template-columns: 1fr;
+    }
+
+    .keys-content > span {
+        margin-top: 20px;
+    }
+
+    .keys-content {
+        padding: 60px 0;
+    }
+
+    .keys-image {
+        display: none;
+    }
+
+    .keys a {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .keys-benefits {
+        flex-direction: column;
+    }
+
+    .keys-benefits p {
+        margin-bottom: 16px;
+    }
+}   
