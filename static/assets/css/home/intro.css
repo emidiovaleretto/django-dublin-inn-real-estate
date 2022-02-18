@@ -64,6 +64,19 @@ h2 span {
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+.form-content .location {
+    background: url("../../img/icons/icon-location.svg") no-repeat right 20px top 10px;
+}
+
+.form-content .property-type {
+    background: url("../../img/icons/icon-property.svg") no-repeat right 20px top 15px;
+}
+
+.form-content .price-range {
+    background: url("../../img/icons/icon-budget.svg") no-repeat right 20px top 15px;
 }
 
 input[type=text] {
@@ -81,7 +94,21 @@ input[type=text]:focus {
 }
 
 button.button {
-    margin-left: 24px;
+    margin-left: 20px;
     border: none;
     cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+button.button::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../../img/icons/icon-search.svg") no-repeat;
+    right: 0;
+    position: absolute;
+    margin-right: 16px;
 }
