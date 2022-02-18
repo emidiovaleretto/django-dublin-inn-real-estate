@@ -35,9 +35,15 @@
 .property-list ul {
     display: flex;
     gap: 40px;
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
     max-width: 1280px;
     margin: 0 auto;
+    overflow-x: auto;
+}
+
+.property-list li {
+    flex: 1;
+    min-width: 280px;
 }
 
 .property-list a {
@@ -52,7 +58,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    position: relative;
 }
 
 .property-list h3::before {
@@ -60,13 +65,32 @@
     display: inline-block;
     width: 12px;
     height: 8px;
+    margin-right: 8px;
     background-color: var(--primary-color-5);
-    position: absolute;
-    left: -20px;
+    transition: width 0.2s;
+}
+
+.property-list a:hover h3::before {
+    width: 24px;
 }
 
 .icons {
     display: flex;
     gap: 6px;
     align-items: center;
+}
+
+
+@media (max-width: 800px) {
+    .property-list {
+        padding-bottom: 60px;
+    }
+
+    .link-home {
+        margin-bottom: 20px;
+    }
+
+    .property-list ul {
+        gap: 20px;
+    }
 }
