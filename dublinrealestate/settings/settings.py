@@ -1,17 +1,3 @@
-from .settings import *
-from decouple import config
-
-DEBUG = config("DEBUG")
-SECRET_KEY = config("SECRET_KEY_TESTING")
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 """
 Django settings for dublinrealestate project.
 
@@ -38,10 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+DEBUG = config("DEBUG")
 
 # Application definition
 
