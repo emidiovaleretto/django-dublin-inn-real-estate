@@ -30,6 +30,10 @@
     --red-button: #8F0000;
 }
 
+.primary-color-7 {
+    color: var(--primary-color-7)
+}
+
 .primary-color-6 {
     color: var(--primary-color-6)
 }
