@@ -1,42 +1,64 @@
 .testimonial {
     padding-bottom: 120px;
 }
-.testimonial {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+.testimonial ul {
+    display: flex;
     gap: 40px;
-    align-items: center;
+    padding: 0 20px 20px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.testimonial li {
+    flex: 1;
+    min-width: 280px;
     text-align: center;
+    background-color: var(--white);
+    padding: 60px;
+    height: 400px;
+    margin-top: 120px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     position: relative;
 }
 
-.testimonial-item {
-    background-color: var(--white);
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 360px;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.testimonial-item img {
+.testimonial img {
+    display: block;
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    top: -20px;
+    position: absolute;
+    top: -80px;
+}
+
+.profile1,
+.profile2,
+.profile3 {
+    left: 130px;
+}
+
+.testimonial-list h3::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url("../../img/icons/icon-quotes.svg") no-repeat;
+    top: 140px;
+    left: 180px;
     position: absolute;
 }
 
-.testimonial-item h3 {
-    margin-top: 120px;
+.testimonial h3 {
+    text-align: center;
+    margin-top: 160px;
     margin-bottom: 20px;
 }
 
-.testimonial-item p {
+.testimonial p {
     margin-bottom: 32px;
 }
 
+.testimonial-list span {
+    font-size: 1.5rem;
+}
