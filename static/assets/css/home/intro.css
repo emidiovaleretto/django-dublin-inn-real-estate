@@ -104,7 +104,11 @@ button.button {
     align-items: center;
 }
 
-button.button::after {
+.button-search {
+    padding-right: 40px;
+}
+
+button.button-search::after {
     content: '';
     display: inline-block;
     width: 16px;
