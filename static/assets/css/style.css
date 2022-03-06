@@ -13,10 +13,13 @@
 @import "./utilities/typography.css";
 @import "./utilities/colors.css";
 
-/* Layout */
+/* Home */
 @import "./home/intro.css";
 @import "./home/property.css";
 @import "./home/features.css";
 @import "./home/keys.css";
 @import "./home/testimonial.css";
 @import "./home/newsletter.css";
+
+/* Properties */
+@import "./properties/properties.css";
