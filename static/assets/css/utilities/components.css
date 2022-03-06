@@ -10,6 +10,25 @@
     font: 600 1.125rem/1.33 "Poppins", sans-serif;
 }
 
+.button.arrow {
+    display: flex;
+    align-items: center;
+}
+
+.button.arrow::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    margin-left: 12px;
+    background-image: url(../../img/icons/icon-arrow.svg);
+    transition: transform .2s;
+}
+
+.button.arrow:hover::after {
+    transform: translateX(4px);
+}
+
 .button:hover {
     background-color: var(--primary-color-6);
 }
