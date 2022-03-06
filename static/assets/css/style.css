@@ -6,6 +6,7 @@
 /* General */
 @import "./general/general.css";
 @import "./general/header.css";
+@import "./general/footer.css";
 
 /* Utilities */
 @import "./utilities/components.css";
