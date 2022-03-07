@@ -43,7 +43,8 @@
             <section class="summary-card" aria-label="Schedule a visit">
                 <h2 class="font-p-m-b gray-9">Summary</h2>
                 <div class="summary-content">
-                    <h3 class="font-p-s gray-11">Ivy House, Booterstown</h3>
+                    <h3 class="font-p-m-b gray-11">Ivy House, Booterstown</h3>
+                    <span class="font-f-m gray-10">€ 2499</span>
                     <ul class="summary-list font-p-xs gray-8">
                         <li><img src="../static/assets/img/icons/icon-bed.svg" alt="">3 bedrooms</li>
                         <li><img src="../static/assets/img/icons/icon-bathtub.svg" alt="">2 bathrooms</li>
@@ -57,8 +58,9 @@
             </section>
 
             <section class="summary-form" aria-label="Form">
-                <h2 class="font-p-m-b gray-9">Contact information</h2>
                 <form class="form" action="/">
+
+                    <h2 class="font-p-m-b gray-9">Contact information</h2>
                     <div>
                         <label for="first_name">Name*</label>
                         <input type="text" id="first_name" name="first_name" placeholder="First Name">
@@ -72,17 +74,32 @@
                         <label for="phone">Phone Number*</label>
                         <input type="text" id="phone" name="phone" placeholder="(000) 000 0000">
                     </div>
-                </form>
-            </section>
 
-            <section class="summary-form" aria-label="Appointment details">
-                <h2 class="font-p-m-b gray-9">Appointment details</h2>
-                <form class="form" action="/">
-                    <div>
-                        <label for="appointment-date">Please select an appointment date</label>
-                        <input type="date" id="appointment-date" name="appointment-date" value="2022-03-07" min="2022-03-07"
-                            max="2022-12-31">
+                    <h2 class="font-p-m-b gray-9">Appointment details</h2>
+                    <div class="secondary-form">
+                        <div>
+                            <label for="appointment-date">Please select an appointment date</label>
+                            <input type="date" id="appointment-date" name="appointment-date" value="2022-03-07"
+                                min="2022-03-07" max="2022-12-31">
+                        </div>
+                        <div>
+                            <h2 class="font-p-m-b gray-9">Thursday, February 17  - 12:00</h2>
+                            <ul class="font-p-m gray-10">
+                                <li>10:00</li>
+                                <li>11:00</li>
+                                <li class="active">12:00</li>
+                                <li>13:00</li>
+                                <li>14:00</li>
+                                <li>15:00</li>
+                            </ul>
+                        </div>
                     </div>
+                    <div>
+                        <input type="checkbox" name="terms" id="terms">
+                        <label class="font-f-m gray-11" for="terms">I agree to the <span class="underline">terms and
+                                conditions</span>.</label>
+                    </div>
+                    <button class="button" type="submit">Confirm</button>
                 </form>
             </section>
         </div>
