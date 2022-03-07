@@ -25,6 +25,10 @@
     transition: transform .2s;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .button.arrow:hover::after {
     transform: translateX(4px);
 }
