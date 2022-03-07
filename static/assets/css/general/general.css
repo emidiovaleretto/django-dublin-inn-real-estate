@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--gray-1);
-    height: 2000px;
 }
 
 h1,
