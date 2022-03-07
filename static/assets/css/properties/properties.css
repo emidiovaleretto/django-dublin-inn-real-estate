@@ -8,6 +8,7 @@
 
 .title-bg {
     background-color: var(--primary-color-5);
+    margin-bottom: 120px;
 }
 
 .title p {
@@ -20,7 +21,7 @@
 }
 
 .properties-bg:nth-child(odd) {
-    background: linear-gradient(to right, var(--white) 30%, rgba(255, 153, 0, 0.3) 0%);
+    background: linear-gradient(to right, var(--gray-1) 30%, rgba(255, 153, 0, 0.3) 0%);
 }
 
 .properties {
