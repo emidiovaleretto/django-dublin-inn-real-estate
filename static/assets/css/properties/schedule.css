@@ -105,7 +105,7 @@
 .summary-form {
     padding: 60px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    margin-bottom: 200px;
+    margin-bottom: 80px;
 }
 
 .summary-list img {
@@ -124,12 +124,22 @@
     margin-bottom: 8px;
 }
 
+.secondary-form p {
+    text-align: center;
+    margin-top: 48px;
+}
+
 .secondary-form,
 .secondary-form ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
+
+.secondary-form ul {
+    margin-top: 12px;
+}
+
 .secondary-form li {
     padding: 16px 32px;
     background-color: var(--gray-3);
@@ -149,4 +159,48 @@
     margin-bottom: 20px;
     width: 16px;
     height: 16px;
+}
+
+@media (max-width: 990px) {
+    #schedule .title p {
+        font-size: 1rem;
+    }
+    #schedule .title h1 {
+        font-size: 3rem;
+    }
+    .summary {
+        grid-template-columns: 1fr;
+    }
+    .summary-card {
+        margin-bottom: 0;
+    }
+    .summary-form {
+        margin-bottom: 32px;
+    }
+    .summary-card {
+        border-radius: 4px 4px 0 0;
+    }
+    .summary-form {
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+@media (max-width: 690px) {
+    #schedule .title p {
+        font-size: 0.825rem;
+    }
+    #schedule .title h1 {
+        font-size: 2.5rem;
+    }
+    .summary-card,
+    .summary-form {
+        padding: 32px;
+    }
+    .primary-form,
+    .secondary-form {
+        grid-template-columns: 1fr;
+    }
+    .form .col-2 {
+        grid-column: 1;
+    }
 }
