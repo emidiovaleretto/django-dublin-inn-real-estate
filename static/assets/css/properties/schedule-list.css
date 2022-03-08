@@ -1,0 +1,44 @@
+.header-list{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+.schedule-list-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 32px 20px 20px;
+    margin-bottom: 32px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.schedule-list-content:nth-child(even) {
+    background-color: rgba(255, 153, 0, 0.3);
+}
+
+.schedule-list-content:nth-child(odd) {
+    background-color: var(--gray-2);
+}
+
+.schedule-list-content img {
+    align-self: flex-start;
+    max-width: 120px;
+}
+
+.schedule-list-content:last-child {
+    margin-bottom: 200px;
+}
+
+.schedule-list a:not(.cancelled):hover {
+    background-color: var(--primary-color-5);
+}
+
+.cancelled,
+.cancelled:hover {
+    background-color: var(--red-button);
+}
+
+
