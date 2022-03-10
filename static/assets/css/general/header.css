@@ -53,3 +53,87 @@
 .header-menu .menu-btn:hover {
     background-color: var(--gray-2)
 }
+
+#btn-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 120px;
+        align-items: flex-end;
+        position: absolute;
+        width: 0;
+        height: calc(100vh - 70px);
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-x: hidden;
+    }
+
+    #nav.active .header-menu {
+        width: 50%;
+        visibility: visible;
+        overflow-x: auto;
+    }
+
+    .header-menu a {
+        padding: 16px 0;
+        margin: 0 32px;
+    }
+
+    .header-menu .menu-btn {
+        margin: 32px;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 8px 16px;
+        font-size: 1.125rem;
+        color: var(--white);
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 8px;
+        align-items: center;
+        z-index: 9999;
+        position: relative;
+    }
+
+    #hamburger {
+        color: var(--white);
+        border-top: 2px solid;
+        width: 24px;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,50 +11,58 @@
     <meta name="author" content="Emidio Valereto">
     <link rel="shortcut icon" href="../static/assets/img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../static/assets/css/style.css">
-    
+
     <title>Dublin Inn Real Estate | Find your dream house</title>
 </head>
+
 <body>
 
     <header class="header-container">
         <div class="header container">
             <h1><a href="./"><img src="../static/assets/img/logo.svg" alt="Dublin Inn Real Estate Logo"></a></h1>
-            <nav aria-label="primary-nav">
-                <ul class="header-menu font-p-s white">
+            <nav id="nav" aria-label="primary-nav">
+                <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu<span id="hamburger"></span></button>
+                <ul id="menu" class="header-menu font-p-s white" role="menu">
                     <li><a href="./properties.html">Properties</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">About us</a></li>
                     <li><a class="menu-btn font-p-m-b primary-color-5" href="">Sign In</a></li>
                 </ul>
-            </nav>    
+            </nav>
         </div>
     </header>
 
     <main class="intro-bg">
         <div class="intro container">
             <div class="intro-content">
-                <h2 class="font-p-xxl gray-10">We help you to find your dream house<span class="primary-color-5">.</span></h2>
-                <p class="font-f-l gray-7">We offer you a personalised service for the sale, purcharse or rental of real estate.</p>
+                <h2 class="font-p-xxl gray-10">We help you to find your dream house<span
+                        class="primary-color-5">.</span></h2>
+                <p class="font-f-l gray-7">We offer you a personalised service for the sale, purcharse or rental of real
+                    estate.</p>
                 <a class="button font-p-m-b" href="">Get Started</a>
             </div>
             <div>
                 <img src="../static/assets/img/img-intro.jpg" alt="An image of buildings.">
             </div>
-        
+
             <div class="intro-form">
                 <p class="font-f-s gray-10">Find the price that fits to your budget</p>
                 <form action="#">
                     <div class="form-content">
-                        <input type="text" name="location" id="location" class="location" placeholder="Location" required>
-                        <input type="text" name="property-type" id="property-type" class="property-type" placeholder="Property Type" required>
-                        <input type="text" name="price-range" id="price-range" class="price-range" placeholder="Price range" required>
+                        <input type="text" name="location" id="location" class="location" placeholder="Location"
+                            required>
+                        <input type="text" name="property-type" id="property-type" class="property-type"
+                            placeholder="Property Type" required>
+                        <input type="text" name="price-range" id="price-range" class="price-range"
+                            placeholder="Price range" required>
                         <button class="button button-search font-f-xs" type="submit">Search Now</button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
-    
+
     <article class="property-list">
         <div class="container property-header">
             <h2 class="font-p-xxl gray-10">Featured Properties<span class="primary-color-5">.</span></h2>
@@ -134,13 +143,15 @@
                     <div>
                         <img src="../static/assets/img/icons/icon-pet.svg" alt="">
                         <h3 class="font-p-l gray-8">Pet allowed</h3>
-                        <p class="font-f-s gray-7">Your pet is also a member of the family. We have properties for you to take your whole family with you.</p>
+                        <p class="font-f-s gray-7">Your pet is also a member of the family. We have properties for you
+                            to take your whole family with you.</p>
                     </div>
 
                     <div>
                         <img src="../static/assets/img/icons/icon-24h.svg" alt="">
                         <h3 class="font-p-l gray-8">24 hours Service</h3>
-                        <p class="font-f-s gray-7">Whatever your problem, whatever the time, we will be here to solve it.</p>
+                        <p class="font-f-s gray-7">Whatever your problem, whatever the time, we will be here to solve
+                            it.</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +166,8 @@
             <li>
                 <img class="profile1" src="../static/assets/img/profile-1.jpg" alt="">
                 <h3 class="font-f-l gray-9">Peter O'Connor</h3>
-                <p class= "font-f-s gray-7">A company whose professionals are outstanding, leaving you more confident to close the deal.</p>
+                <p class="font-f-s gray-7">A company whose professionals are outstanding, leaving you more confident to
+                    close the deal.</p>
                 <div class="primary-color-6">
                     <span>&#9733;</span>
                     <span>&#9733;</span>
@@ -168,7 +180,8 @@
             <li>
                 <img class="profile2" src="../static/assets/img/profile-2.jpg" alt="">
                 <h3 class="font-f-l gray-9">Ciara McAdams</h3>
-                <p class="font-f-s gray-7">They're very efficient. I got in touch one day and the next day I had my contract signed.</p>
+                <p class="font-f-s gray-7">They're very efficient. I got in touch one day and the next day I had my
+                    contract signed.</p>
                 <div class="primary-color-7">
                     <span>&#9733;</span>
                     <span>&#9733;</span>
@@ -181,7 +194,8 @@
             <li>
                 <img class="profile3" src="../static/assets/img/profile-3.jpg" alt="">
                 <h3 class="font-f-l gray-9">Urla Diamond</h3>
-                <p class="font-f-s gray-7">I needed to rent a property as soon as I arrived in the city and they did all the work
+                <p class="font-f-s gray-7">I needed to rent a property as soon as I arrived in the city and they did all
+                    the work
                     between me and the owner.</p>
                 <div class="primary-color-6">
                     <span>&#9733;</span>
@@ -191,7 +205,7 @@
                     <span>&#9733;</span>
                 </div>
             </li>
-            
+
         </ul>
     </article>
 
@@ -202,15 +216,16 @@
         <div class="newsletter-container">
             <div class="newsletter-content">
                 <h3 class="font-p-xl gray-11">Subscribe to our newsletter!</h3>
-                <p class= "font-f-s gray-10">Stay on top of the news and be the first to know when a new property is available.</p>
+                <p class="font-f-s gray-10">Stay on top of the news and be the first to know when a new property is
+                    available.</p>
                 <img src="../static/assets/img/image-newsletter.png" alt="">
             </div>
             <div class="newsletter-form">
                 <p class="font-f-l gray-10">Subscribe to hear more from us</p>
                 <form action="#">
                     <div class="form-content">
-                        <input type="text" name="email-newsletter" id="email-newsletter" class="email-newsletter" placeholder="Your best email"
-                            required>
+                        <input type="text" name="email-newsletter" id="email-newsletter" class="email-newsletter"
+                            placeholder="Your best email" required>
                         <button class="button font-f-xs" type="submit">Subscribe</button>
                     </div>
                 </form>
@@ -256,5 +271,7 @@
         </div>
     </footer>
 
+    <script src="../static/assets/js/script.js"></script>c
 </body>
+
 </html>

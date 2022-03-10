@@ -20,8 +20,10 @@
     <header class="header-container">
         <div class="header container">
             <h1><a href="./"><img src="../static/assets/img/logo.svg" alt="Dublin Inn Real Estate Logo"></a></h1>
-            <nav aria-label="primary-nav">
-                <ul class="header-menu font-p-s white">
+            <nav id="nav" aria-label="primary-nav">
+                <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu<span id="hamburger"></span></button>
+                <ul id="menu" class="header-menu font-p-s white" role="menu">
                     <li><a href="./properties.html">Properties</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">About us</a></li>
@@ -137,18 +139,8 @@
             <p class="copy font-f-s gray-4">Dublin Inn - Real State 2022 © All rights reserved</p>
         </div>
     </footer>
-    <script>
-        var options = {
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        };
-        var date = new Date();
-        let today = date.toISOString().slice(0,10);
-        document.getElementById("time-description").innerHTML = date.toLocaleDateString("en-US", options);
-        document.getElementById("appointment-date").setAttribute("value", today);
-    </script>
+    
+    <script src="../static/assets/js/script.js"></script>
 </body>
 
 </html>

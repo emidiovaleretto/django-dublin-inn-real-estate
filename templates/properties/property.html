@@ -21,9 +21,11 @@
         <div class="header container">
             <h1><a href="../index.html"><img src="../../static/assets/img/logo.svg"
                         alt="Dublin Inn Real Estate Logo"></a></h1>
-            <nav aria-label="primary-nav">
-                <ul class="header-menu font-p-s white">
-                    <li><a href="../properties.html">Properties</a></li>
+            <nav id="nav" aria-label="primary-nav">
+                <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">Menu<span id="hamburger"></span></button>
+                <ul id="menu" class="header-menu font-p-s white" role="menu">
+                    <li><a href="./properties.html">Properties</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">About us</a></li>
                     <li><a class="menu-btn font-p-m-b primary-color-5" href="">Sign In</a></li>
@@ -150,4 +152,8 @@
         </div>
     </footer>
 
+    <script src="../../static/assets/js/script.js"></script>
+
 </body>
+
+</html>
