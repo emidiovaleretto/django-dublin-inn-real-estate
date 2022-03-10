@@ -2,68 +2,134 @@
     background: linear-gradient(var(--primary-color-5) 400px, var(--gray-1) 0px);
 }
 
-#schedule .title h1 {
-    padding-bottom: 0;
-}
-
-.summary {
+.schedule {
     display: grid;
     grid-template-columns: 5fr 7fr;
     margin-top: -60px;
+    padding-bottom: 120px;
 }
 
-.summary h2 {
+.schedule h2 {
     display: flex;
     align-items: center;
-    font-weight: bold;
+    position: relative;
+    grid-column: 1 / -1;
 }
 
-.summary h2::before {
+.schedule h2::before {
     content: '';
     display: inline-block;
     width: 4px;
     height: 8px;
-    background-color: var(--primary-color-5);
+    background-color: var(--primary-color-7);
+    position: absolute;
+    left: -12px;
+}
+
+.schedule-content,
+.schedule-form {
+    padding: 60px;
+    margin-top: -60px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.schedule-content {
+    border-radius: 4px 0 0 4px;
+    background-color: var(--gray-2);
+}
+
+.schedule-content label::before {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--gray-1);
+    border-radius: 50%;
     margin-right: 8px;
 }
 
-.summary-card {
-    background: var(--gray-2);
-    border-radius: 4px 0 0 4px;
-}
-
-.summary-card h2 {
-    margin-bottom: 20px;
-}
-
-.summary-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 32px;
-}
-
-.summary-content h3 {
+.schedule-content label {
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+    color: var(--gray-11);
+    background-color: var(--gray-8);
+    color: var(--white);
     margin-bottom: 16px;
-}
-
-.summary-content span {
+    padding: 12px 16px;
+    border-radius: 4px;
+    cursor: pointer;
     display: grid;
-    justify-content: end;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
 }
 
-.summary-form {
+.schedule-content label:hover {
+    background-color: var(--gray-9);
+}
+
+.schedule-content input:focus + label {
+    box-shadow: 0 0 0 1px var(--primary-color-7);
+}
+
+.schedule-content input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.schedule-content input:checked + label {
+    background-color: rgba(255, 153, 0, 0.3);
+    color: var(--gray-11);
+}
+
+.schedule-content input:checked + label::before {
+    border-color: var(--gray-7);
+    box-shadow: inset 0 0 0 3px var(--white), inset 0 0 0 6px var(--gray-7);
+}
+
+.schedule-details {
+    display: none;
     background-color: var(--white);
-    border-radius: 0 4px 4px 0;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    align-items: center;
 }
 
-.primary-form {
+.schedule-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.schedule-details li img {
+    margin-right: 8px;
+    padding-bottom: 2px;
+}
+
+.schedule-details img:nth-child(3) {
+    margin-top: 16px;
+    grid-column: 1 / -1;
+}
+
+.schedule-content input:checked ~ .schedule-details {
+    display: grid;
+}
+
+.schedule-form {
+    border-radius: 0 4px 4px 0;
+    background-color: var(--white);
+}
+
+.schedule-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.primary-form label {
-    display: block;
+.schedule-form label {
+    display: inline-block;
     font: 600 1rem/1.5 "Poppins", sans-serif;
     margin-bottom: 4px;
 }
@@ -72,10 +138,51 @@
     grid-column: span 2;
 }
 
-.primary-form input[type=text],
-.primary-form input[type=email],
-.primary-form input[type=tel],
-.secondary-form input[type=date] {
+.first-name,
+.last-name {
+    grid-row: 2;
+}
+
+.schedule-form ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.schedule-form li {
+    padding: 16px 32px;
+    background-color: var(--gray-3);
+    border-radius: 4px;
+}
+
+.schedule-form li.active {
+    background-color: var(--primary-color-6);
+    color: var(--white);
+}
+
+.schedule-form li:hover:not(.active) {
+    background-color: #94ccaf;
+}
+
+.time-list {
+    grid-column: 2;
+    margin-bottom: 20px;
+}
+
+#time-description {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.input-date,
+.terms {
+    grid-column: 1 / -1;
+}
+
+.schedule-form input[type=text],
+.schedule-form input[type=email],
+.schedule-form input[type=tel],
+.schedule-form input[type=date] {
     font: 400 1rem/1.5 "Fira Sans", sans-serif;
     background-color: var(--gray-1);
     border: 1px solid var(--gray-2);
@@ -87,120 +194,22 @@
     box-sizing: border-box;
 }
 
-.primary-form input[type=text]:focus,
-.primary-form input[type=email]:focus,
-.primary-form input[type=tel]:focus,
-.secondary-form input[type=date]:focus  {
+.schedule-form input[type=text]:focus,
+.schedule-form input[type=email]:focus,
+.schedule-form input[type=tel]:focus,
+.schedule-form input[type=date]:focus {
     outline: none;
     border-color: var(--primary-color-7);
     background-color: var(--white);
     box-shadow: 0 0 0 2px #fea;
 }
 
-.primary-form input[type=tel] {
+.schedule-form input[type=tel] {
     margin-bottom: 60px;
 }
 
-.summary-card,
-.summary-form {
-    padding: 60px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    margin-bottom: 80px;
-}
-
-.summary-list img {
-    display: inline-block;
-    margin-right: 8px;
-}
-
-.secondary-form {
-    margin-bottom: 32px;
-}
-
-.secondary-form label {
-    display: block;
-    width: max-content;
-    font: 600 1rem/1.5 "Poppins", sans-serif;
-    margin-bottom: 8px;
-}
-
-.secondary-form p {
-    text-align: center;
-    margin-top: 48px;
-}
-
-.secondary-form,
-.secondary-form ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-.secondary-form ul {
-    margin-top: 12px;
-}
-
-.secondary-form li {
-    padding: 16px 32px;
-    background-color: var(--gray-3);
-    border-radius: 4px;
-}
-
-.secondary-form li.active {
-    background-color: var(--primary-color-6);
-    color: var(--white);
-}
-
-.secondary-form li:hover:not(.active) {
-    background-color: #94ccaf;
-}
-
-.summary-form input[type=checkbox] {
+.schedule-form input[type=checkbox] {
     margin-bottom: 20px;
     width: 16px;
     height: 16px;
-}
-
-@media (max-width: 990px) {
-    #schedule .title p {
-        font-size: 1rem;
-    }
-    #schedule .title h1 {
-        font-size: 3rem;
-    }
-    .summary {
-        grid-template-columns: 1fr;
-    }
-    .summary-card {
-        margin-bottom: 0;
-    }
-    .summary-form {
-        margin-bottom: 32px;
-    }
-    .summary-card {
-        border-radius: 4px 4px 0 0;
-    }
-    .summary-form {
-        border-radius: 0 0 4px 4px;
-    }
-}
-
-@media (max-width: 690px) {
-    #schedule .title p {
-        font-size: 0.825rem;
-    }
-    #schedule .title h1 {
-        font-size: 2.5rem;
-    }
-    .summary-card,
-    .summary-form {
-        padding: 32px;
-    }
-    .primary-form,
-    .secondary-form {
-        grid-template-columns: 1fr;
-    }
-    .form .col-2 {
-        grid-column: 1;
-    }
 }

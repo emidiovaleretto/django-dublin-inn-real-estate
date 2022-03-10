@@ -39,74 +39,65 @@
             </div>
         </div>
 
-        <div class="summary container">
-            <section class="summary-card" aria-label="Schedule a visit">
+        <form class="schedule container" action="">
+            <div class="schedule-content">
                 <h2 class="font-p-m-b gray-9">Summary</h2>
-                <div class="summary-content">
-                    <h3 class="font-p-m-b gray-11">Ivy House, Booterstown</h3>
-                    <span class="font-f-m gray-10">€ 2499</span>
-                    <ul class="summary-list font-p-xs gray-8">
+                <input type="radio" name="property" value="property" id="property">
+                <label for="property">Ivy House, Booterstown <span>€ 2499</span></label>
+                <div class="schedule-details">
+                    <ul class="font-p-xs gray-8">
                         <li><img src="../static/assets/img/icons/icon-bed.svg" alt="">3 bedrooms</li>
                         <li><img src="../static/assets/img/icons/icon-bathtub.svg" alt="">2 bathrooms</li>
                         <li><img src="../static/assets/img/icons/icon-measures.svg" alt="">2,101 m²</li>
                     </ul>
-                    <img src="../static/assets/img/properties/property_2.jpg" alt="">
-                </div>
-                <div class="summary-map">
+                    <a href="./properties/property.html"><img src="../static/assets/img/properties/property_2.jpg" alt=""></a>
                     <img src="../static/assets/img/map.jpg" alt="">
                 </div>
-            </section>
-
-            <section class="summary-form" aria-label="Form">
-                <form class="form" action="/">
-                    <h2 class="font-p-m-b gray-9">Contact information</h2>
-                    <div class="primary-form">
-                        <div>
-                            <label for="first_name">First Name*</label>
-                            <input type="text" id="first_name" name="first_name" placeholder="Scott" required>
-                        </div>
-                        <div>
-                            <label for="first_name">Last Name*</label>
-                            <input type="text" id="last_name" name="last_name" placeholder="Power" required>
-                        </div>
-                        <div class="col-2">
-                            <label for="email">Email*</label>
-                            <input type="email" id="email" name="email" placeholder="example@example.com" required>
-                        </div>
-                        <div class="col-2">
-                            <label for="phone">Phone Number*</label>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{2} [0-9]{4}" placeholder="089 123 456" required>
-                        </div>
-                    </div>
-
-                    <h2 class="font-p-m-b gray-9">Appointment details</h2>
-                    <div class="secondary-form">
-                        <div>
-                            <label for="appointment-date">Please select an appointment date</label>
-                            <input type="date" id="appointment-date" name="appointment-date" value=""
-                                min="2022-03-07" max="2022-12-31" required>
-                        </div>
-                        <div>
-                            <p class="font-f-s gray-9">Thursday, February 17 - 12:00</p>
-                            <ul class="font-p-m gray-10">
-                                <li><a href="">10:00</a></li>
-                                <li><a href="">11:00</a></li>
-                                <li class="active"><a href="">12:00</a></li>
-                                <li><a href="">13:00</a></li>
-                                <li><a href="">14:00</a></li>
-                                <li><a href="">15:00</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="terms" id="terms">
-                        <label class="font-f-m gray-11" for="terms">I agree to the <a href="" class="underline">terms and
-                                conditions</a>.</label>
-                    </div>
-                    <button class="button" type="submit">Confirm</button>
-                </form>
-            </section>
-        </div>
+            </div>
+            <div class="schedule-form form">
+                <h2 class="font-p-m-b gray-9">Contact information</h2>
+                <div class="first-name">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Scott" required>
+                </div>
+                <div class="last-name">
+                    <label for="last-name">Last Name*</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Power" required>
+                </div>
+                <div class="col-2">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                </div>
+                <div class="col-2">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{2} [0-9]{4}"
+                        placeholder="089 123 456" required>
+                </div>
+                <h2 class="font-p-m-b gray-9">Appointment details</h2>
+                <div class="input-date">
+                    <label for="appointment-date">Please select an appointment date</label>
+                    <input type="date" id="appointment-date" name="appointment-date" value="" min="2022-01-01"
+                        max="2030-12-31" required>
+                </div>
+                <div class="time-list">
+                    <p id="time-description" class="font-f-m gray-9"></p>
+                    <ul class="font-p-m gray-10">
+                        <li><a href="">10:00</a></li>
+                        <li><a href="">11:00</a></li>
+                        <li class="active"><a href="">12:00</a></li>
+                        <li><a href="">13:00</a></li>
+                        <li><a href="">14:00</a></li>
+                        <li><a href="">15:00</a></li>
+                    </ul>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" name="terms" id="terms">
+                    <label class="font-f-m gray-11" for="terms">I agree to the <a href="" class="underline">terms and
+                            conditions</a>.</label>
+                </div>
+                <button class="button col-2" type="submit">Confirm</button>
+            </div>
+        </form>
     </main>
 
     <footer class="footer-bg">
@@ -146,7 +137,18 @@
             <p class="copy font-f-s gray-4">Dublin Inn - Real State 2022 © All rights reserved</p>
         </div>
     </footer>
-
+    <script>
+        var options = {
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        };
+        var date = new Date();
+        let today = date.toISOString().slice(0,10);
+        document.getElementById("time-description").innerHTML = date.toLocaleDateString("en-US", options);
+        document.getElementById("appointment-date").setAttribute("value", today);
+    </script>
 </body>
 
 </html>
