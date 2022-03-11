@@ -1,13 +1,15 @@
+import os
+import dj_database_url
 from .settings import *
-from decouple import config
 
-DEBUG = config("DEBUG")
-SECRET_KEY = config("SECRET_KEY_PRODUCTION")
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+if os.path.exists("env.py"):
+    import env
+
+DEBUG = os.environ.get("DEBUG_PRODUCTION")
+SECRET_KEY = os.environ.get("SECRET_KEY_PRODUCTION")
+ALLOWED_HOSTS = [os.environ.get("HEROKU_HOST")]
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.environ.get("HEROKU_DB"))
 }
