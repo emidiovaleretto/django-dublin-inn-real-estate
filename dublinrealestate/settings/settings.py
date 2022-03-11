@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'authentication',
-    'property_search',
+    'home',
+    'property',
 ]
 
 # DJANGO ALLAUTH SETTINGS
