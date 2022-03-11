@@ -8,3 +8,4 @@ node_modules/
 cloudinary_python.txt
 .env
 env.py
+db.sqlite3
