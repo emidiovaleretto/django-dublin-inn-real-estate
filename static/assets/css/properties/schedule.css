@@ -240,3 +240,13 @@
         border-radius: 0 0 4px 4px;
     }
 }
+
+@media (max-width: 600px) {
+    .schedule-form .first-name {
+        grid-column: span 2;
+    }
+    .schedule-form .last-name {
+        grid-row: 3;
+        grid-column: span 2;
+    }
+}
