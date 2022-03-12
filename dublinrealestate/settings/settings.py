@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'property',
+    'scheduling',
 ]
 
 # DJANGO ALLAUTH SETTINGS
