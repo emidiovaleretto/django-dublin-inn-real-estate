@@ -81,6 +81,7 @@
         width: 50%;
         visibility: visible;
         overflow-x: auto;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.4);
     }
 
     .header-menu a {
