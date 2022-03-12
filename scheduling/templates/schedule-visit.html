@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block 'title' %}Book a viewing today | Dublin Inn Real Estate{% endblock %}
 
@@ -19,12 +20,12 @@
                 <label for="property">Ivy House, Booterstown <span>€ 2499</span></label>
                 <div class="schedule-details">
                     <ul class="font-p-xs gray-8">
-                        <li><img src="../static/assets/img/icons/icon-bed.svg" alt="">3 bedrooms</li>
-                        <li><img src="../static/assets/img/icons/icon-bathtub.svg" alt="">2 bathrooms</li>
-                        <li><img src="../static/assets/img/icons/icon-measures.svg" alt="">2,101 m²</li>
+                        <li><img src="{% static 'img/icons/icon-bed.svg' %}" alt="">3 bedrooms</li>
+                        <li><img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">2 bathrooms</li>
+                        <li><img src="{% static 'img/icons/icon-measures.svg' %}" alt="">2,101 m²</li>
                     </ul>
-                    <a href="./properties/property.html"><img src="../static/assets/img/properties/property_2.jpg" alt=""></a>
-                    <img src="../static/assets/img/map.jpg" alt="">
+                    <a href="{% url 'property_detail' %}"><img src="{% static 'img/properties/property_2.jpg' %}" alt=""></a>
+                    <img src="{% static 'img/map.jpg' %}" alt="">
                 </div>
             </div>
             <div class="schedule-form form">
