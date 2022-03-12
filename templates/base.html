@@ -11,8 +11,8 @@
         content="Dublin Inn Real Estate. We offer you a personalised service for the sale, purcharse or rental of real estate.">
     <meta name="keywords" content="Real Estate, Rent, Properties, Dublin, Ireland, Europe ">
     <meta name="author" content="Emidio Valereto">
-    <link rel="shortcut icon" href="{% static 'assets/img/favicon.svg' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.svg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>{% block 'title' %}{% endblock %}</title>
 </head>
@@ -21,7 +21,7 @@
 
     <header class="header-container">
         <div class="header container">
-            <h1><a href="{% url 'index' %}"><img src="{% static 'assets/img/logo.svg' %}" alt="Dublin Inn Real Estate Logo"></a></h1>
+            <h1><a href="{% url 'index' %}"><img src="{% static 'img/logo.svg' %}" alt="Dublin Inn Real Estate Logo"></a></h1>
             <nav id="nav" aria-label="primary-nav">
                 <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu"
                     aria-expanded="false">Menu<span id="hamburger"></span></button>
@@ -39,7 +39,7 @@
 
     <footer class="footer-bg">
         <div class="footer container">
-            <img src="{% static 'assets/img/logo.svg' %}" alt="">
+            <img src="{% static 'img/logo.svg' %}" alt="">
             <div class="footer-contact">
                 <h3 class="font-f-l-b white">Contact</h3>
                 <ul class="font-p-m gray-4">
@@ -50,13 +50,13 @@
                 </ul>
                 <div class="footer-social">
                     <a href="">
-                        <img src="{% static 'assets/img/icons/instagram.svg' %}" alt="">
+                        <img src="{% static 'img/icons/instagram.svg' %}" alt="">
                     </a>
                     <a href="">
-                        <img src="{% static 'assets/img/icons/facebook.svg' %}" alt="">
+                        <img src="{% static 'img/icons/facebook.svg' %}" alt="">
                     </a>
                     <a href="">
-                        <img src="{% static 'assets/img/icons/youtube.svg' %}" alt="">
+                        <img src="{% static 'img/icons/youtube.svg' %}" alt="">
                     </a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
         </div>
     </footer>
 
-    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>
