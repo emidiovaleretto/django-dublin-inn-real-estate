@@ -1,4 +1,5 @@
 from user.models import *
+from property.models import Property
 
 
 class Profile(models.Model):
@@ -9,7 +10,7 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
     token = models.CharField(max_length=255, null=True, blank=True)
     avatar = CloudinaryField('image', default='placeholder')
-    favourites = models.ManyToManyField(User, blank=True, related_name='favourites')
+    favourites = models.ManyToManyField(Property, blank=True, related_name='favourites')
 
     def __str__(self):
         return self.user.username
@@ -22,7 +23,7 @@ class Profile(models.Model):
         except:
             pass
 
-    @receiver(post_save, sender=Model)
+    @receiver(post_save, sender=User)
     def _save_user_profile(sender, instance, **kwargs):
         try:
             instance.profile.save()
