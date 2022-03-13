@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'user',
     'home',
     'property',
     'scheduling',
