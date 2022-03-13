@@ -16,3 +16,4 @@ PROPERTY_TYPE = (
 from .Property import Property
 from .County import County
 from .District import District
+from .Neighborhood import Neighborhood
