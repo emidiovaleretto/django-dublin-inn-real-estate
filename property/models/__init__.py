@@ -3,12 +3,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-ROLE_CHOICE = (
-    (1, 'Admin'),
-    (2, 'Client'),
-    (3, 'Agent')
-)
-
 PROPERTY_CATEGORY = (
     (1, 'Sale'),
     (2, 'Rent')
