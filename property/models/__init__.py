@@ -33,3 +33,5 @@ from .County import County
 from .District import District
 from .Neighborhood import Neighborhood
 from .PropertyViewing import PropertyViewing
+from .PropertyViewingDate import PropertyViewingDate
+from .PropertyViewingTime import PropertyViewingTime
