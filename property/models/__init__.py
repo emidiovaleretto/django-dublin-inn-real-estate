@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
+
+ROLE_CHOICE = (
+    (1, 'Admin'),
+    (2, 'Client'),
+    (3, 'Agent')
+)
 
 PROPERTY_CATEGORY = (
     (1, 'Sale'),
@@ -28,10 +35,10 @@ VIEWING_DATE = (
     ('Sun', 'Sunday'),
 )
 
-from .Property import Property
 from .County import County
 from .District import District
 from .Neighborhood import Neighborhood
-from .PropertyViewing import PropertyViewing
 from .PropertyViewingDate import PropertyViewingDate
 from .PropertyViewingTime import PropertyViewingTime
+from .Property import Property
+from .PropertyViewing import PropertyViewing
