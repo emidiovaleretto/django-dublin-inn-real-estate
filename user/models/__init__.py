@@ -9,4 +9,4 @@ ROLE_CHOICE = (
     (3, 'Agent')
 )
 
-from .models import Profile
+from .User import Profile
