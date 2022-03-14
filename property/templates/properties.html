@@ -22,7 +22,7 @@
                     <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
                         alt="Placeholder image">
                 {% else %}
-                    <img src="{% static 'img/properties/property_1.jpg' %}" alt="Property 1">
+                    <img src="{{ property.image.url }}" alt="Property 1">
                 {% endif %}
                 <span class="font-f-m white">&#8364 {{ property.property_price }}</span>
             </div>
