@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block 'title' %}Our Properties | Dublin Inn Real Estate{% endblock%}
 
@@ -12,32 +13,37 @@
         </div>
     </div>
 
+{% for property in property_list %}
+
     <div class="properties-bg">
         <div class="properties container">
             <div class="property-image">
-                <img src="../static/assets/img/properties/property_1.jpg" alt="Property 1">
-                <span class="font-f-m white">€ 2950</span>
+                {% if 'placeholder' in property.image.url %}
+                    <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
+                        alt="Placeholder image">
+                {% else %}
+                    <img src="{% static 'img/properties/property_1.jpg' %}" alt="Property 1">
+                {% endif %}
+                <span class="font-f-m white">&#8364 {{ property.property_price }}</span>
             </div>
             <div class="property-content">
-                <h2 class="font-p-xl gray-10">Abbey View, Sandyford</h2>
-                <p class="font-f-s gray-8">The location is one of great convenience, less than a 5-minute walk to
-                    Sandyford Village. An
-                    excellent choice of shopping amenities and premier schools.</p>
+                <h2 class="font-p-xl gray-10">{{ property.property_name }}</h2>
+                <p class="font-f-s gray-8">{{ property.description }}</p>
                 <ul class="font-p-m gray-8">
                     <li>
-                        <img src="../static/assets/img/icons/icon-bed.svg" alt="">
-                        5 bedrooms
+                        <img src="{% static 'img/icons/icon-bed.svg' %}" alt="">
+                        {{ property.bedrooms }} bedrooms
                     </li>
                     <li>
-                        <img src="../static/assets/img/icons/icon-bathtub.svg" alt="">
-                        4 bathrooms
+                        <img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">
+                        {{ property.bathrooms }} bathrooms
                     </li>
                     <li>
-                        <img src="../static/assets/img/icons/icon-measures.svg" alt="">
-                        4.204m²
+                        <img src="{% static 'img/icons/icon-measures.svg' %}" alt="">
+                        {{ property.metreage }}m²
                     </li>
                     <li>
-                        <img src="../static/assets/img/icons/icon-train.svg" alt="">
+                        <img src="{% static 'img/icons/icon-train.svg' %}" alt="">
                         Close to the M50 and Luas
                     </li>
                 </ul>
@@ -45,139 +51,7 @@
             </div>
         </div>
     </div>
-
-    <div class="properties-bg">
-        <div class="properties container">
-            <div class="property-image">
-                <img src="../static/assets/img/properties/property_2.jpg" alt="Property 2">
-                <span class="font-f-m white">€ 2499</span>
-            </div>
-            <div class="property-content">
-                <h2 class="font-p-xl gray-10">Ivy House, Booterstown</h2>
-                <p class="font-f-s gray-8">A semi- detached family home, nicely positioned on this tree-lined
-                    residential road in the heart of Booterstown, between the N11 and the Rock Road.</p>
-                <ul class="font-p-m gray-8">
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bed.svg" alt="">
-                        3 bedrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bathtub.svg" alt="">
-                        2 bathrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-measures.svg" alt="">
-                        2.101m²
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-train.svg" alt="">
-                        Booterstown DART Station
-                    </li>
-                </ul>
-                <a href="./properties/property.html" class="button arrow">See more</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="properties-bg">
-        <div class="properties container">
-            <div class="property-image">
-                <img src="../static/assets/img/properties/property_3.jpg" alt="Property 3">
-                <span class="font-f-m white">€ 3245</span>
-            </div>
-            <div class="property-content">
-                <h2 class="font-p-xl gray-10">Quayside Quarter, Swords</h2>
-                <p class="font-f-s gray-8">Designed to refine the work life balance, the Residents' Lounge is an elegant and considered
-                    space designed to meet the needs of its residents.</p>
-                <ul class="font-p-m gray-8">
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bed.svg" alt="">
-                        2 bedrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bathtub.svg" alt="">
-                        2 bathrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-measures.svg" alt="">
-                        268m²
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-train.svg" alt="">
-                        Bus: 33, 41, 43  
-                    </li>
-                </ul>
-                <a href="./properties/property.html" class="button arrow">See more</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="properties-bg">
-        <div class="properties container">
-            <div class="property-image">
-                <img src="../static/assets/img/properties/property_4.jpg" alt="Property 4">
-                <span class="font-f-m white">€ 1950</span>
-            </div>
-            <div class="property-content">
-                <h2 class="font-p-xl gray-10">North Wall Quay, Dublin 1</h2>
-                <p class="font-f-s gray-8">Greystar is delighted to introduce Quayside Quarter, the residential component of Dublin
-                    Landings at North Wall Quay.</p>
-                <ul class="font-p-m gray-8">
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bed.svg" alt="">
-                        3 bedrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bathtub.svg" alt="">
-                        3 bathrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-measures.svg" alt="">
-                        315m²
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-train.svg" alt="">
-                        Docklands rail station (DART)
-                    </li>
-                </ul>
-                <a href="./properties/property.html" class="button arrow">See more</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="properties-bg">
-        <div class="properties container">
-            <div class="property-image">
-                <img src="../static/assets/img/properties/property_5.jpg" alt="Property 5">
-                <span class="font-f-m white">€ 1950</span>
-            </div>
-            <div class="property-content">
-                <h2 class="font-p-xl gray-10">Adamstown, Lucan</h2>
-                <p class="font-f-s gray-8">With excellent transport links within walking distance, Adamstown is within easy reach of
-                    Dublin City centre by train, bus or car and is a location set up for all modern needs.</p>
-                <ul class="font-p-m gray-8">
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bed.svg" alt="">
-                        3 bedrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-bathtub.svg" alt="">
-                        2 bathrooms
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-measures.svg" alt="">
-                        215m²
-                    </li>
-                    <li>
-                        <img src="../static/assets/img/icons/icon-train.svg" alt="">
-                        25B and 25D bus stops
-                    </li>
-                </ul>
-                <a href="./properties/property.html" class="button arrow">See more</a>
-            </div>
-        </div>
-    </div>
-
+{% endfor %}
 </main>
 
 {% endblock %}
