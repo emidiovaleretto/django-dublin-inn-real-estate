@@ -10,11 +10,11 @@ class Property(models.Model):
     district = models.ForeignKey(District, on_delete=models.DO_NOTHING)
     county = models.ForeignKey(County, on_delete=models.DO_NOTHING)
     description = models.TextField()
-    images = CloudinaryField('image', default='placeholder')
+    image = CloudinaryField('image', default='placeholder')
     property_category = models.IntegerField(
         choices=PROPERTY_CATEGORY, default=2)
     property_type = models.IntegerField(choices=PROPERTY_TYPE, default=1)
-    property_price = models.FloatField()
+    property_price = models.IntegerField()
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()
     metreage = models.FloatField()
@@ -27,5 +27,5 @@ class Property(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return self.name                        
+        return self.property_name                        
         
