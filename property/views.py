@@ -1,9 +1,13 @@
 from django.shortcuts import render
+from django.views import generic, View
+from .models import *
 
-# Create your views here.
 
-def property_view(request):
-    return render(request, 'properties.html')
+class PropertyList(generic.ListView):
+    model = Property
+    queryset = model.objects.order_by('-created_at')
+    template_name = 'properties.html'
+    paginate_by = 3
 
 def property_detail(request):
     return render(request, 'property_inner.html')
