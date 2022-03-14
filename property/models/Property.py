@@ -2,8 +2,8 @@ from property.models import *
 
 
 class Property(models.Model):
-    slug = models.SlugField(max_length=100, null=False, unique=True)
     property_name = models.CharField(max_length=50, null=False, unique=True)
+    slug = models.SlugField(max_length=100, null=False, unique=True)
     propert_address = models.CharField(null=False, max_length=255)
     neighborhood = models.ForeignKey(
         Neighborhood, null=True, on_delete=models.DO_NOTHING)
