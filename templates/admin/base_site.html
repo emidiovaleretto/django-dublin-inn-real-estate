@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+
+{% block branding %}
+    <h1><a href="{% url 'admin:index' %}"><img src="{% static 'img/logo.svg' %}" alt="Dublin Inn Real Estate Logo"></a></h1>
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admin/admin.css' %}">
+{% endblock %}
