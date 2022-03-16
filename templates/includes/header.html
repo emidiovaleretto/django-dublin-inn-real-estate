@@ -1,0 +1,16 @@
+{% load static %}
+<header class="header-container">
+    <div class="header container">
+        <h1><a href="{% url 'index' %}"><img src="{% static 'img/logo.svg' %}" alt="Dublin Inn Real Estate Logo"></a></h1>
+        <nav id="nav" aria-label="primary-nav">
+            <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">Menu<span id="hamburger"></span></button>
+            <ul id="menu" class="header-menu font-p-s white" role="menu">
+                <li><a href="{% url 'properties' %}">Properties</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About us</a></li>
+                <li><a class="menu-btn font-p-m-b primary-color-5" href="{% url 'account_login' %}">Sign In</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
