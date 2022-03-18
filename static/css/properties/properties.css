@@ -96,6 +96,32 @@
     margin-bottom: 60px;
 }
 
+.pagination ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.pagination li {
+    padding: 16px 24px;
+    border-radius: 4px;
+    background-color: var(--gray-2);
+    color: var(--primary-color-5);
+    border: 1px solid var(--gray-3);
+    align-content: center;
+    align-self: center;
+}
+
+.pagination li.active {
+    background-color: var(--primary-color-5);
+    color: var(--white);
+}
+
+.pagination li:hover:not(.active):not(.disabled) {
+    background-color: #94ccaf;
+}
+
 @media (max-width: 900px) {
     .properties-bg:nth-child(odd) {
         background: rgba(255, 153, 0, 0.3);
