@@ -3,6 +3,7 @@
 {% if page_obj.has_other_pages %}
 <nav class="pagination" role="navigation" aria-label="pagination">
     <ul>
+        <li>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</li>
         {% if page_obj.has_previous %}
         <li>
             <a href="?page={{ page_obj.previous_page_number }}">Prev &laquo;</a>
