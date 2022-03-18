@@ -24,10 +24,17 @@ class PropertyAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(Neighborhood)
+class NeighborhoodAdmin(admin.ModelAdmin):
+    list_display = ('name', 'district',)
+    search_fields = ('name',)
+    list_filter = ('district',)
+
+
 admin.site.register(Profile)
 admin.site.register(County)
 admin.site.register(District)
-admin.site.register(Neighborhood)
+# admin.site.register(Neighborhood)
 admin.site.register(PropertyViewing)
 admin.site.register(PropertyViewingDate)
 admin.site.register(PropertyViewingTime)
