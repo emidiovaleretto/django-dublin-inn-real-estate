@@ -8,6 +8,7 @@
 @import "./general/header.css";
 @import "./general/footer.css";
 @import "./general/login.css";
+@import "./general/signup.css";
 
 /* Utilities */
 @import "./utilities/components.css";
