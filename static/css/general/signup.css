@@ -1,0 +1,129 @@
+.signup {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    margin-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.signup h2 {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    position: relative;
+    grid-column: 1 / -1;
+}
+
+.signup-form {
+    position: relative;
+}
+
+.signup-form::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../img/icons/icon-shamrock.svg');
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.signup-image,
+.signup-form {
+    padding: 60px;
+    margin-top: -60px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.signup-image {
+    border-radius: 0 4px 4px 0;
+    background-color: var(--gray-2);
+    background: url('../../img/signup.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.signup-form {
+    border-radius: 4px 0 0 4px;
+    background-color: var(--white);
+}
+
+.signup-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.signup-form input[type=password] {
+    background: url("../../img/icons/icon-hide-password.svg") no-repeat right 20px top 16px;
+}
+
+.signup-form input[type=text],
+.signup-form input[type=email],
+.signup-form input[type=password] {
+    font: 300 0.875rem/1.5 "Fira Sans", sans-serif;
+    background-color: var(--gray-2);
+    border: 1px solid var(--gray-3);
+    padding: 12px;
+    padding-left: 20px;
+    margin-left: 0;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-form input[type=text]:focus,
+.signup-form input[type=email]:focus,
+.signup-form input[type=password]:focus {
+    outline: none;
+    border-color: var(--primary-color-7);
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+.signup-form .button {
+    margin: 20px 0 32px 0;
+}
+
+@media (max-width: 1200px) {
+    #signup h1 {
+        padding-bottom: 0;
+    }
+
+    .signup-image,
+    .signup-form {
+        padding: 32px;
+        margin-top: 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .signup {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-image {
+        display: none;
+    }
+
+    .signup-form {
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signup {
+        margin-top: 20px;
+    }
+
+    .signup-form .first-name {
+        grid-column: span 2;
+    }
+
+    .signup-form .last-name {
+        grid-row: 3;
+        grid-column: span 2;
+    }
+}
