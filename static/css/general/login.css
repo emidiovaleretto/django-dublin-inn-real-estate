@@ -54,22 +54,17 @@
     gap: 16px;
 }
 
-.login-form div #id_login {
+.login-form input[type=text] {
     background: url("../../img/icons/icon-user.svg") no-repeat left 20px top 16px;
 }
 
-.login-form div #id_password {
+.login-form input[type=password] {
     background: url("../../img/icons/icon-key.svg") no-repeat left 20px top 16px;
 }
 
-.login-form div #id_login:focus::placeholder,
-.login-form div #id_password:focus::placeholder {
-    color: transparent;
-}
-
-.login-form div #id_login,
-.login-form div #id_password {
-    font: 400 1rem/1.5 "Fira Sans", sans-serif;
+.login-form input[type=text],
+.login-form input[type=password] {
+    font: 300 0.875rem/1.5 "Fira Sans", sans-serif;
     background-color: var(--gray-2);
     border: 1px solid var(--gray-3);
     padding: 12px;
@@ -81,8 +76,8 @@
     box-sizing: border-box;
 }
 
-.login-form div #id_login:focus,
-.login-form div #id_password:focus {
+.login-form input[type=text]:focus,
+.login-form input[type=password]:focus {
     outline: none;
     border-color: var(--primary-color-7);
     background-color: var(--white);
