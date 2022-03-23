@@ -34,6 +34,6 @@ from .District import District
 from .Neighborhood import Neighborhood
 from .PropertyViewingDate import PropertyViewingDate
 from .PropertyViewingTime import PropertyViewingTime
-from .Property import Property
 from .Images import Image
+from .Property import Property
 from .PropertyViewing import PropertyViewing
