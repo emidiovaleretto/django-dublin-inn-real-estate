@@ -1,25 +1,43 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block 'title' %}{% trans "Sign In" %} | Dublin Inn Real Estate{% endblock %}
+{% block title %}{% trans "Sign In" %} | Dublin Inn Real Estate{% endblock %}
 
-{% block 'content' %}
+{% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+{% if form.errors %}
+  {{ form.non_field_errors }}
+{% endif %}
 
-  <p>{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-
-  <form class="login" method="POST" action="{% url 'account_login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-    <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-  </form>
+<form class="login container" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  <div class="login-form form">
+    <h2 class="font-f-l gray-10">Find your dream home</h2>
+    <div class="col-2">
+      <input type="text" id="id_login" name="login" placeholder="Your username" autocomplete="off"
+        control-id="ControlID-2" required>
+    </div>
+    <div class="col-2">
+      <input type="password" id="id_password" name="password" placeholder="Password" autocomplete="off"
+        control-id="ControlID-3" required>
+    </div>
+    <a class="secondaryAction font-f-s gray-7" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?"%}</a>
+    <button class="button" type="submit">Sign in</button>
+    <span class="font-f-s gray-8 col-2">Not a member? Sign up for <a href="{{ signup_url }}"
+        class="underline black">free</a></span>
+    <div class="form-social-login col-2">
+      <p class="font-f-s gray-7">Login with</p>
+      <div class="icons">
+        <a href=""><img src="{% static 'img/icons/facebook-black.svg' %}" alt="Icon Facebook"></a>
+        <a href=""><img src="{% static 'img/icons/twitter.svg' %}" alt="Icon Twitter"></a>
+        <a href=""><img src="{% static 'img/icons/google.svg' %}" alt="Icon Google"></a>
+      </div>
+    </div>
+  </div>
+  <div class="login-image"></div>
+</form>
 
 {% endblock %}
