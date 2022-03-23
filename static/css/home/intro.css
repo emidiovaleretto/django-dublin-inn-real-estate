@@ -69,14 +69,6 @@ h2 {
     background: url("../../img/icons/icon-budget.svg") no-repeat right 20px top 15px;
 }
 
-input[type=text]:focus::placeholder {
-    color: transparent;
-}
-
-input[type=text]:focus {
-    background-image: none;
-}
-
 input[type=text] {
     margin-left: 16px;
     padding: 16px;
@@ -88,7 +80,10 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-    border: none;
+    outline: none;
+    border-color: var(--primary-color-7);
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px #fea;
 }
 
 button.button {
