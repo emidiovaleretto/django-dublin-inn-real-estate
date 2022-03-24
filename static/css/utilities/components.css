@@ -29,6 +29,10 @@
     text-decoration: underline;
 }
 
+.bold {
+    font-weight: 600;
+}
+
 .button.arrow:hover::after {
     transform: translateX(4px);
 }
