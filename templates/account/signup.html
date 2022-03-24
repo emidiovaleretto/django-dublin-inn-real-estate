@@ -7,15 +7,6 @@
 
 {% block content %}
 
-<!-- <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form> -->
-
 <form class="signup container" method="POST" action="{% url 'account_signup' %}">
   {% csrf_token %}
   <div class="signup-form form">
@@ -40,6 +31,10 @@
       <input type="password" id="id_password2" name="password2" placeholder="Confirm password" autocomplete="off"
         control-id="ControlID-3" required>
     </div>
+    <div class="terms">
+      <input type="checkbox" name="terms" id="terms">
+      <label class="font-f-xs gray-11" for="terms">I agree to the <a href="" class="bold underline">Terms of Service</a>.</label>
+  </div>
     {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
