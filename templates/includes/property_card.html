@@ -26,12 +26,8 @@
                     <img src="{% static 'img/icons/icon-measures.svg' %}" alt="">
                     {{ property.metreage }}m²
                 </li>
-                <li>
-                    <img src="{% static 'img/icons/icon-train.svg' %}" alt="">
-                    Close to the M50 and Luas
-                </li>
             </ul>
-            <a href="{% url 'property_detail' %}" class="button arrow">See more</a>
+            <a href="{% url 'property_detail' property.slug %}" class="button arrow">See more</a>
         </div>
     </div>
 </div>
