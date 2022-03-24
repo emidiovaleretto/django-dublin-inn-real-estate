@@ -38,44 +38,22 @@
 <article class="property-list">
     <div class="container property-header">
         <h2 class="font-p-xxl gray-10">Featured Properties<span class="primary-color-5">.</span></h2>
-        <a class="link-home font-f-m primary-color-5" href="">View all</a>
+        <a class="link-home font-f-m primary-color-5" href="{% url 'properties' %}">View all</a>
     </div>
     <ul>
+        {% for property in object_list %}
         <li>
-            <a href="">
-                <img src="{% static 'img/properties/house1-home.jpg' %}" alt="Property 1">
-                <h3 class="font-p-xl">Abbey View</h3>
+            <a href="{% url 'property_detail' property.slug %}">
+                <img src="{{ property.image.all.0.image.url }}" alt="Property 1">
+                <h3 class="font-p-xl gray-10">{{ property }}</h3>
                 <div class="icons font-f-m gray-8">
-                    <img src="{% static 'img/icons/icon-bed.svg' %}" alt=""><span>5</span>
-                    <img src="{% static 'img/icons/icon-bathtub.svg' %}" alt=""><span>4</span>
-                    <img src="{% static 'img/icons/icon-measures.svg' %}" alt=""><span>4,204m²</span>
+                    <img src="{% static 'img/icons/icon-bed.svg' %}" alt=""><span>{{ property.bedrooms }}</span>
+                    <img src="{% static 'img/icons/icon-bathtub.svg' %}" alt=""><span>{{ property.bathrooms }}</span>
+                    <img src="{% static 'img/icons/icon-measures.svg' %}" alt=""><span>{{ property.metreage }}m²</span>
                 </div>
             </a>
         </li>
-
-        <li>
-            <a href="">
-                <img src="{% static 'img/properties/house2-home.jpg' %}" alt="Property 2">
-                <h3 class="font-p-xl">Ivy House</h3>
-                <div class="icons font-f-m gray-8">
-                    <img src="{% static 'img/icons/icon-bed.svg' %}" alt=""><span>3</span>
-                    <img src="{% static 'img/icons/icon-bathtub.svg' %}" alt=""><span>2</span>
-                    <img src="{% static 'img/icons/icon-measures.svg' %}" alt=""><span>2,101m²</span>
-                </div>
-            </a>
-        </li>
-
-        <li>
-            <a href="">
-                <img src="{% static 'img/properties/house3-home.jpg' %}" alt="Property 3">
-                <h3 class="font-p-xl">Naomh Eoin</h3>
-                <div class="icons font-f-m gray-8">
-                    <img src="{% static 'img/icons/icon-bed.svg' %}" alt=""><span>2</span>
-                    <img src="{% static 'img/icons/icon-bathtub.svg' %}" alt=""><span>1</span>
-                    <img src="{% static 'img/icons/icon-measures.svg' %}" alt=""><span>85m²</span>
-                </div>
-            </a>
-        </li>
+        {% endfor %}
     </ul>
 </article>
 
