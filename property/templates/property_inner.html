@@ -1,89 +1,84 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Ivy House, Booterstown | Dublin Inn Real Estate{% endblock %}
+{% block title %}{{ property.property_name }} | Dublin Inn Real Estate{% endblock %}
 
 {% block content %}
 
 
-    <main class="container">
-        <div class="title">
-            <p class="font-p-xl gray-7">€ 2499 <span class="font-p-xs gray-6">per month</span></p>
-            <h1 class="font-p-xxl gray-10">Ivy House, Booterstown</h1>
+<main class="container">
+    <div class="title">
+        <p class="font-p-xl gray-7">€ {{ property.property_price }} <span class="font-p-xs gray-6">per month</span></p>
+        <h1 class="font-p-xxl gray-10">{{ property.property_name }}</h1>
+    </div>
+    <div class="property">
+        <div class="property-image">
+            {% if 'placeholder' in property.image.url %}
+                <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
+                    alt="Placeholder image">
+            {% else %}
+                <img src="{{ property.image.all.0.image.url }}" alt="Property image">
+                <img src="{{ property.image.all.0.image.url }}" alt="Property image">
+                <img src="{{ property.image.all.0.image.url }}" alt="Property image">
+            {% endif %}
         </div>
-        <div class="property">
-            <div class="property-image">
-                <img src="{% static 'img/properties/property_inner_1.jpg' %}" alt="">
-                <img src="{% static 'img/properties/property_inner_2.jpg' %}" alt="">
-                <img src="{% static 'img/properties/property_inner_3.jpg' %}" alt="">
+        <div class="property-inner-content">
+            <p class="font-f-l gray-9">{{ property.description }}</p>
+            <div class="property-button">
+                <a class="button" href="{% url 'book_a_viewing' property_id=1 %}">Schedule your visit</a>
+                <span class="font-p-xs gray-8"><img src="{% static 'img/icons/icon-bed.svg' %}" alt="">{{ property.bedrooms }} bedrooms</span>
+                <span class="font-p-xs gray-8"><img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">{{ property.bathrooms }} bedrooms</span>
             </div>
-            <div class="property-inner-content">
-                <p class="font-f-l gray-9">An exclusive development on the corner of Booterstown Avenue and N11, on the
-                    46A QBC, convenient for UCD, Stillorgan
-                    and City Centre and walking distance to booterstown DART station. </p>
-                <div class="property-button">
-                    <a class="button" href="{% url 'book_a_viewing' property_id=1 %}">Schedule your visit</a>
-                    <span class="font-p-xs gray-8"><img src="{% static 'img/icons/icon-bed.svg' %}" alt=""> 3
-                        bedrooms</span>
-                    <span class="font-p-xs gray-8"><img src="{% static 'img/icons/icon-bathhub.svg' %}" alt=""> 2
-                        bedrooms</span>
-                </div>
-                <h2 class="font-p-xs gray-11">Property facilities</h2>
-                <ul class="property-facilities">
-                    <li>
-                        <img src="{% static 'img/icons/icon-car.svg' %}" alt="">
-                        <h3 class="font-p-m-b gray-11">Indoor Parking</h3>
-                        <p class="font-f-s gray-8">Keep your car parked indoors and prevent it from being broken into or
-                            stolen.</p>
-                    </li>
-                    <li>
-                        <img src="{% static 'img/icons/icon-fireplace.svg' %}" alt="">
-                        <h3 class="font-p-m-b gray-11">Central Heating</h3>
-                        <p class="font-f-s gray-8">Better for your health, central heating systems are known to help
-                            prevent various health
-                            problems.</p>
-                    </li>
-                    <li>
-                        <img src="{% static 'img/icons/icon-laundry.svg' %}" alt="">
-                        <h3 class="font-p-m-b gray-11">Washing Machine</h3>
-                        <p class="font-f-s gray-8">A washing machine is a huge time saver over hand washing.</p>
-                    </li>
-                    <li>
-                        <img src="{% static 'img/icons/icon-garden.svg' %}" alt="">
-                        <h3 class="font-p-m-b gray-11">Garden</h3>
-                        <p class="font-f-s gray-8">Enjoy the summer making your own BBQ at home.</p>
-                    </li>
-                </ul>
-            </div>
+            <h2 class="font-p-xs gray-11">Property facilities</h2>
+            <ul class="property-facilities">
+                <li>
+                    <img src="{% static 'img/icons/icon-car.svg' %}" alt="">
+                    <h3 class="font-p-m-b gray-11">Indoor Parking</h3>
+                    <p class="font-f-s gray-8">Keep your car parked indoors and prevent it from being broken into or
+                        stolen.</p>
+                </li>
+                <li>
+                    <img src="{% static 'img/icons/icon-fireplace.svg' %}" alt="">
+                    <h3 class="font-p-m-b gray-11">Central Heating</h3>
+                    <p class="font-f-s gray-8">Better for your health, central heating systems are known to help
+                        prevent various health
+                        problems.</p>
+                </li>
+                <li>
+                    <img src="{% static 'img/icons/icon-laundry.svg' %}" alt="">
+                    <h3 class="font-p-m-b gray-11">Washing Machine</h3>
+                    <p class="font-f-s gray-8">A washing machine is a huge time saver over hand washing.</p>
+                </li>
+                <li>
+                    <img src="{% static 'img/icons/icon-garden.svg' %}" alt="">
+                    <h3 class="font-p-m-b gray-11">Garden</h3>
+                    <p class="font-f-s gray-8">Enjoy the summer making your own BBQ at home.</p>
+                </li>
+            </ul>
         </div>
+    </div>
 
-        <div class="property-map">
-            <h2 class="font-f-l-b gray-11">Map</h2>
-            <img src="{% static 'img/map.jpg' %}" alt="">
-        </div>
-    </main>
+    <div class="property-map">
+        <h2 class="font-f-l-b gray-11">Map</h2>
+        <img src="{% static 'img/map.jpg' %}" alt="">
+    </div>
+</main>
 
-    <article class="options container">
-        <div class="options-header">
-            <h2 class="font-p-xxl gray-10">You might be interested<span class="primary-color-5">.</span></h2>
-        </div>
-        <ul>
-            <li>
-                <a href="">
-                    <img src="{% static 'img/properties/property_3.jpg' %}" alt="Property 3">
-                    <h3 class="font-p-xl gray-11">Quayside Quarter, Swords</h3>
-                    <p class="font-f-m gray-8">€ 3245</p>
-                </a>
-            </li>
-
-            <li>
-                <a href="">
-                    <img src="{% static 'img/properties/property_4.jpg' %}" alt="Property 3">
-                    <h3 class="font-p-xl gray-11">North Wall Quay, Dublin 1</h3>
-                    <p class="font-f-m gray-8">€ 1950</p>
-                </a>
-            </li>
-        </ul>
-    </article>
+<article class="options container">
+    <div class="options-header">
+        <h2 class="font-p-xxl gray-10">You might be interested<span class="primary-color-5">.</span></h2>
+    </div>
+    <ul>
+        {% for suggestion in suggestions %}
+        <li>
+            <a href="{% url 'property_detail' suggestion.slug %}">
+                <img src="{{ suggestion.image.all.0.image.url }}" alt="Property 3">
+                <h3 class="font-p-xl gray-11">{{ suggestion.property_name }}</h3>
+                <p class="font-f-m gray-8">€ {{ suggestion.property_price }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</article>
 
 {% endblock %}
