@@ -84,6 +84,8 @@
 
 .signup-form .button {
     margin: 20px 0 32px 0;
+    max-width: 100%;
+    justify-content: center;
 }
 
 @media (max-width: 1200px) {
