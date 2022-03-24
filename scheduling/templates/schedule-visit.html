@@ -17,14 +17,14 @@
             <div class="schedule-content">
                 <h2 class="font-p-m-b gray-9">Summary</h2>
                 <input type="radio" name="property" value="property" id="property">
-                <label for="property">Ivy House, Booterstown <span>€ 2499</span></label>
+                <label for="property">{{ property.property_name }} <span>€ {{ property.property_price }}</span></label>
                 <div class="schedule-details">
                     <ul class="font-p-xs gray-8">
-                        <li><img src="{% static 'img/icons/icon-bed.svg' %}" alt="">3 bedrooms</li>
-                        <li><img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">2 bathrooms</li>
-                        <li><img src="{% static 'img/icons/icon-measures.svg' %}" alt="">2,101 m²</li>
+                        <li><img src="{% static 'img/icons/icon-bed.svg' %}" alt="">{{ property.bedrooms}} bedrooms</li>
+                        <li><img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">{{ property.bathrooms }} bathrooms</li>
+                        <li><img src="{% static 'img/icons/icon-measures.svg' %}" alt="">{{ property.metreage}} m²</li>
                     </ul>
-                    <a href="{% url 'property_detail' %}"><img src="{% static 'img/properties/property_2.jpg' %}" alt=""></a>
+                    <a href="{% url 'property_detail' property.slug %}"><img src="{{ property.image.all.0.image.url }}" alt=""></a>
                     <img src="{% static 'img/map.jpg' %}" alt="">
                 </div>
             </div>
