@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.PropertyList.as_view(), name='properties'),
-    path('property_detail/', views.property_detail, name='property_detail'),
+    path('<slug:slug>/', views.PropertyView.as_view(), name='property_detail'),
 ]
