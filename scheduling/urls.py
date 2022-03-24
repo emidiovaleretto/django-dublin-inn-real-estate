@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('property-id=<int:property_id>', views.book_a_viewing, name='book_a_viewing'),
+    path('booking-a-viewing/', views.BookAPropertyViewing.as_view(), name='book_a_viewing'),
 ]
