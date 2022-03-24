@@ -18,14 +18,15 @@
                     alt="Placeholder image">
             {% else %}
                 <img src="{{ property.image.all.0.image.url }}" alt="Property image">
-                <img src="{{ property.image.all.0.image.url }}" alt="Property image">
-                <img src="{{ property.image.all.0.image.url }}" alt="Property image">
+                <img src="{{ property.image.all.1.image.url }}" alt="Property image">
+                <img src="{{ property.image.all.2.image.url }}" alt="Property image">
             {% endif %}
+            <p class="font-p-xs gray-11">*Images merely illustrative</p>
         </div>
         <div class="property-inner-content">
             <p class="font-f-l gray-9">{{ property.description }}</p>
             <div class="property-button">
-                <a class="button" href="{% url 'book_a_viewing' property_id=1 %}">Schedule your visit</a>
+                <a class="button" href="{% url 'book_a_viewing' property.slug %}">Schedule your visit</a>
                 <span class="font-p-xs gray-8"><img src="{% static 'img/icons/icon-bed.svg' %}" alt="">{{ property.bedrooms }} bedrooms</span>
                 <span class="font-p-xs gray-8"><img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">{{ property.bathrooms }} bedrooms</span>
             </div>
