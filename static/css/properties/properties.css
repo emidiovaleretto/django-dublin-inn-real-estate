@@ -104,13 +104,18 @@
 }
 
 .pagination li {
-    padding: 16px 24px;
+    padding: 16px 0;
     border-radius: 4px;
     background-color: var(--gray-2);
     color: var(--primary-color-5);
     border: 1px solid var(--gray-3);
     align-content: center;
     align-self: center;
+}
+
+.pagination li:first-child {
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .pagination li.active {
@@ -120,6 +125,10 @@
 
 .pagination li:hover:not(:first-child):not(.active):not(.disabled) {
     background-color: #94ccaf;
+}
+
+.pagination li a {
+    padding: 16px 24px;
 }
 
 @media (max-width: 900px) {
