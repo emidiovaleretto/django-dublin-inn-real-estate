@@ -17,9 +17,9 @@
                 <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
                     alt="Placeholder image">
             {% else %}
-                <img src="{{ property.image.all.0.image.url }}" alt="Property image">
-                <img src="{{ property.image.all.1.image.url }}" alt="Property image">
-                <img src="{{ property.image.all.2.image.url }}" alt="Property image">
+                <img id="first" src="{{ property.image.all.0.image.url }}" alt="Property image" onclick="changeImage(this);">
+                <img src="{{ property.image.all.1.image.url }}" alt="Property image" onclick="changeImage(this);">
+                <img src="{{ property.image.all.2.image.url }}" alt="Property image" onclick="changeImage(this);">
             {% endif %}
             <p class="font-p-xs gray-11">*Images merely illustrative</p>
         </div>
