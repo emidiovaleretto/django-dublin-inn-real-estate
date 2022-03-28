@@ -41,7 +41,7 @@
         <a class="link-home font-f-m primary-color-5" href="{% url 'properties' %}">View all</a>
     </div>
     <ul>
-        {% for property in object_list %}
+        {% for property in properties %}
         <li>
             <a href="{% url 'property_detail' property.slug %}">
                 <img src="{{ property.image.all.0.image.url }}" alt="Property 1">
