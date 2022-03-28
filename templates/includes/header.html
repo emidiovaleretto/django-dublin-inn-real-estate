@@ -12,7 +12,12 @@
                 <li><a href="">About us</a></li>
                 <div class="profile-active">
                     {% if user.is_authenticated %}
-                    <img class="avatar" src="{% static 'img/profile-1.jpg' %}" alt="">
+                        {% if 'placeholder' in profile.avatar.url %}
+                            <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
+                                alt="Placeholder image">
+                        {% else %}
+                            <img class="avatar" src="{{ profile.avatar.url }}" alt="User Picture Profile">
+                        {% endif %}
                     <div class="dropdown">
                         <span class="font-p-s white">{{ user.username }}</span>
                         <div class="dropdown-content black">
