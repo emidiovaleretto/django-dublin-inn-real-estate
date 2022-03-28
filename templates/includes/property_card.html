@@ -6,7 +6,9 @@
                 <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
                     alt="Placeholder image">
             {% else %}
+            <a href="{% url 'property_detail' property.slug %}">
                 <img src="{{ property.image.all.0.image.url }}" alt="Property 1">
+            </a>
             {% endif %}
             <span class="font-f-m white">&#8364 {{ property.property_price }}</span>
         </div>
