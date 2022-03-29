@@ -54,22 +54,23 @@ h2 {
 .form-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
-.form-content .location {
+/* .form-content .location {
     background: url("../../img/icons/icon-location.svg") no-repeat right 20px top 10px;
 }
 
 .form-content .property-type {
-    background: url("../../img/icons/icon-property.svg") no-repeat right 20px top 15px;
-}
+    background: url("../../img/icons/icon-property.svg") no-repeat right 8px top 15px;
+} */
 
 .form-content .price-range {
-    background: url("../../img/icons/icon-budget.svg") no-repeat right 20px top 15px;
+    background: url("../../img/icons/icon-budget.svg") no-repeat right 8px top 15px;
 }
 
-input[type=text] {
+input[type=text],
+.form-content select {
     margin-left: 16px;
     padding: 16px;
     background: var(--gray-1);
@@ -79,7 +80,8 @@ input[type=text] {
     outline: none;
 }
 
-input[type=text]:focus {
+input[type=text]:focus,
+.form-content select:focus {
     outline: none;
     border-color: var(--primary-color-7);
     background-color: var(--white);
@@ -149,7 +151,8 @@ button.button-search::after {
         left: 0;
     }
 
-    .form-content input[type=text] {
+    .form-content input[type=text],
+    .form-content select {
         width: 100%;
     }
 }

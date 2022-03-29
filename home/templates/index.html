@@ -22,12 +22,24 @@
             <p class="font-f-s gray-10">Find the price that fits to your budget</p>
             <form action="#">
                 <div class="form-content">
-                    <input type="text" name="location" id="location" class="location" placeholder="Location"
-                        required>
-                    <input type="text" name="property-type" id="property-type" class="property-type"
-                        placeholder="Property Type" required>
-                    <input type="text" name="price-range" id="price-range" class="price-range"
-                        placeholder="Price range" required>
+                    <select name="location" id="location" class="location gray-9">
+                        <optgroup label="Districts">
+                            {% for district in districts %}
+                            <option value="{{ district.id }}">{{ district }}</option>
+                            {% endfor %}
+                        </optgroup>
+                        <optgroup label="Neighborhoods">
+                            {% for neighborhood in neighborhoods %}
+                                <option value="{{ neighborhood.id }}">{{ neighborhood }}</option>
+                            {% endfor %}
+                        </optgroup>
+                    </select>
+                    <select name="property-type" id="property-type" class="property-type gray-9">
+                        <option value="1">Studio</option>
+                        <option value="2">Apartment</option>
+                        <option value="3">House</option>
+                    </select>
+                    <input type="text" name="price-range" id="price-range" class="price-range" placeholder="Price" required>
                     <button class="button button-search font-f-xs" type="submit">Search Now</button>
                 </div>
             </form>
