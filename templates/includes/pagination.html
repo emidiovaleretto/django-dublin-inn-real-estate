@@ -1,20 +1,20 @@
 {% load static %}
 <!-- START PAGINATION -->
-{% if page_obj.has_other_pages %}
+{% if properties.has_other_pages %}
 <nav class="pagination" role="navigation" aria-label="pagination">
     <ul>
-        <li>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</li>
-        {% if page_obj.has_previous %}
+        <li>Page {{ properties.number }} of {{ properties.paginator.num_pages }}</li>
+        {% if properties.has_previous %}
         <li>
-            <a href="?page={{ page_obj.previous_page_number }}">Prev &laquo;</a>
+            <a href="?page={{ properties.previous_page_number }}">Prev &laquo;</a>
         </li>
         {% else %}
         <li class="disabled">
             <a title="No previous page" disabled>&laquo;</a>
         </li>
         {% endif %}
-        {% for page in page_obj.paginator.page_range %}
-        {% if page_obj.number == page %}
+        {% for page in properties.paginator.page_range %}
+        {% if properties.number == page %}
         <li class="active">
             <a>{{ page }}</a>
         </li>
@@ -24,9 +24,9 @@
         </li>
         {% endif %}
         {% endfor %}
-        {% if page_obj.has_next %}
+        {% if properties.has_next %}
         <li>
-            <a href="?page={{ page_obj.next_page_number }}">Next &raquo;</a>
+            <a href="?page={{ properties.next_page_number }}">Next &raquo;</a>
         </li>
         {% else %}
         <li class="disabled">
