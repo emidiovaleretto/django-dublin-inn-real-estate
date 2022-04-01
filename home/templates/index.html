@@ -8,8 +8,8 @@
 <main class="intro-bg">
     <div class="intro container">
         <div class="intro-content">
-            <h2 class="font-p-xxl gray-10">We help you to find your dream house<span
-                    class="primary-color-5">.</span></h2>
+            <h2 class="font-p-xxl gray-10">We help you to find your dream house<span class="primary-color-5">.</span>
+            </h2>
             <p class="font-f-l gray-7">We offer you a personalised service for the sale, purcharse or rental of real
                 estate.</p>
             <a class="button font-p-m-b" href="">Get Started</a>
@@ -20,7 +20,7 @@
 
         <div class="intro-form">
             <p class="font-f-s gray-10">Find the price that fits to your budget</p>
-            <form action="#">
+            <form action="{% url 'properties' %}" method="GET">
                 <div class="form-content">
                     <select name="location" id="location" class="location gray-9">
                         <optgroup label="Districts">
@@ -30,7 +30,7 @@
                         </optgroup>
                         <optgroup label="Neighborhoods">
                             {% for neighborhood in neighborhoods %}
-                                <option value="{{ neighborhood.id }}">{{ neighborhood }}</option>
+                            <option value="{{ neighborhood.id }}">{{ neighborhood }}</option>
                             {% endfor %}
                         </optgroup>
                     </select>
@@ -39,7 +39,7 @@
                         <option value="2">Apartment</option>
                         <option value="3">House</option>
                     </select>
-                    <input type="text" name="price-range" id="price-range" class="price-range" placeholder="Price" required>
+                    <input type="text" name="price-range" id="price-range" class="price-range" placeholder="Price">
                     <button class="button button-search font-f-xs" type="submit">Search Now</button>
                 </div>
             </form>
@@ -167,7 +167,6 @@
                 <span>&#9733;</span>
             </div>
         </li>
-
     </ul>
 </article>
 
