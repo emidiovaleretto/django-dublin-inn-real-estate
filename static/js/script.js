@@ -24,18 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('.current_year').text(new Date().getFullYear());
 
-
-    let options = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    };
-    let date = new Date();
-    let today = date.toISOString().slice(0, 10);
-    document.getElementById("time-description").innerHTML = date.toLocaleDateString("en-US", options);
-    document.getElementById("appointment-date").setAttribute("value", today);
-
 });
 
 function changeImage(imgs) {
