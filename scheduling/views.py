@@ -32,4 +32,4 @@ def schedule_a_property_viewing(request, slug):
     )
 
     viewing.save()
-    return redirect('appointment')
+    return redirect('my-visits')
