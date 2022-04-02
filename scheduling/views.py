@@ -6,7 +6,7 @@ from user.models import Profile
 
 
 @login_required(login_url='/auth/login')
-def schedule_a_property_viewing(request, slug):
+def index(request, slug):
     property = get_object_or_404(Property, slug=slug)
     profile = get_object_or_404(Profile.objects.all())
 
