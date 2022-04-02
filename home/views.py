@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 from django.db.models import Q
 from django.core.paginator import Paginator
 from property.models import Property, District, Neighborhood
@@ -39,13 +40,16 @@ def property_searching(request):
         properties = Property.objects.filter(property_price__gte=min_price).filter(
             property_price__lte=max_price).filter(Q(neighborhood=location) | Q(district=location)).filter(property_type__in=property_type)
 
+        if not properties.exists():
+            # TODO Create a 404 template
+            return HttpResponse('<h1>No properties available</h1>')
+
     else:
         properties = Property.objects.all()
 
     paginator = Paginator(properties, 5)
     page = request.GET.get('page')
     per_page = paginator.get_page(page)
-
 
     context = {
         'properties': per_page,
