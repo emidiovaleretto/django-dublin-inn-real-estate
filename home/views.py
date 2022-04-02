@@ -34,11 +34,13 @@ def property_searching(request):
             min_price = 1000
         if not max_price:
             max_price = 10000
+        if not location:
+            location = 1
         if not property_type:
             property_type = [1, 2, 3]
 
-        properties = Property.objects.filter(property_price__gte=min_price).filter(
-            property_price__lte=max_price).filter(Q(neighborhood=location) | Q(district=location)).filter(property_type__in=property_type)
+        properties = Property.objects.filter(property_price__gte=min_price).filter(property_price__lte=max_price).filter(
+            Q(neighborhood=location) | Q(district=location)).filter(property_type__in=property_type)
 
         if not properties.exists():
             # TODO Create a 404 template
