@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My scheduled visits | Dublin Inn Real Estate{% endblock %}
+
+{% block content %}
+
+<div class="title-bg">
+    <div class="title container">
+        <h1 class="font-p-xxl white">My visits<span class="primary-color-7">.</span></h1>
+    </div>
+</div>
+
+<div class="schedule-list container">
+    <div class="header-list font-p-m gray-11">
+        <p>Property</p>
+        <p>Property Address</p>
+        <p>Appointment Date/Time</p>
+        <p>Status</p>
+    </div>
+    {% for appointment in appointments %}
+    <div class="schedule-list-content">
+        <a href="{% url 'property_detail' appointment.property.slug %}">
+            <img src="{{ appointment.property.image.all.0 }}" alt="">
+        </a>
+        <h2 class="font-f-l">{{ appointment.property }}</h2>
+        <p class="font-f-s gray-10">{{ appointment.day_for_viewing }} - {{ appointment.time_for_viewing }}</p>
+        {% if appointment.status == 1 %}
+            <a class="button">Scheduled</a>
+        {% elif appointment.status == 2 %}
+            <a class="button cancelled">Cancelled</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
