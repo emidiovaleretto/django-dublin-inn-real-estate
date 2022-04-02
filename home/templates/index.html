@@ -20,9 +20,10 @@
 
         <div class="intro-form">
             <p class="font-f-s gray-10">Find the price that fits to your budget</p>
-            <form action="{% url 'properties' %}" method="GET">
+            <form action="{% url 'property-searching' %}" method="GET">
                 <div class="form-content">
                     <select name="location" id="location" class="location gray-9">
+                        <option value="">Location</option>
                         <optgroup label="Districts">
                             {% for district in districts %}
                             <option value="{{ district.id }}">{{ district }}</option>
@@ -35,11 +36,12 @@
                         </optgroup>
                     </select>
                     <select name="property-type" id="property-type" class="property-type gray-9">
+                        <option value="">Property Type</option>
                         <option value="1">Studio</option>
                         <option value="2">Apartment</option>
                         <option value="3">House</option>
                     </select>
-                    <select name="min" id="min-price">
+                    <select name="min" id="min-price" class="gray-9">
                         <option value="">Min. Price</option>
                         <option value="1000">&#8364 1000</option>
                         <option value="2000">&#8364 2000</option>
@@ -52,7 +54,7 @@
                         <option value="9000">&#8364 9000</option>
                         <option value="10000">&#8364 10000</option>
                     </select>
-                    <select name="max" id="max-price">
+                    <select name="max" id="max-price" class="gray-9">
                         <option value="">Max. Price</option>
                         <option value="1000">&#8364 1000</option>
                         <option value="2000">&#8364 2000</option>
