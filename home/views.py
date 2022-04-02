@@ -49,12 +49,15 @@ def property_searching(request):
     else:
         properties = Property.objects.all()
 
+    profile = get_object_or_404(Profile.objects.all())
+
     paginator = Paginator(properties, 5)
     page = request.GET.get('page')
     per_page = paginator.get_page(page)
 
     context = {
         'properties': per_page,
+        'profile': profile
     }
 
     return render(request, 'properties.html', context=context)
