@@ -58,18 +58,6 @@ h2 {
     align-items: center;
 }
 
-/* .form-content .location {
-    background: url("../../img/icons/icon-location.svg") no-repeat right 20px top 10px;
-}
-
-.form-content .property-type {
-    background: url("../../img/icons/icon-property.svg") no-repeat right 8px top 15px;
-} */
-
-.form-content .price-range {
-    background: url("../../img/icons/icon-budget.svg") no-repeat right 8px top 15px;
-}
-
 input[type=text],
 .form-content select {
     margin-left: 16px;
