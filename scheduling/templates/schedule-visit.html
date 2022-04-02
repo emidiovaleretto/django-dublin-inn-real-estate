@@ -13,7 +13,8 @@
             </div>
         </div>
 
-        <form class="schedule container" action="">
+        <form class="schedule container" action="{% url 'appointment' property.slug %}" method="POST">
+            {% csrf_token %}
             <div class="schedule-content">
                 <h2 class="font-p-m-b gray-9">Summary</h2>
                 <input type="radio" name="property" value="property" id="property">
@@ -44,25 +45,24 @@
                 </div>
                 <div class="col-2">
                     <label for="phone">Phone Number*</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3} [0-9]{2} [0-9]{4}"
-                        placeholder="089 123 456" required>
+                    <input type="tel" id="phone" name="phone" placeholder="089 123 456" required>
                 </div>
                 <h2 class="font-p-m-b gray-9">Appointment details</h2>
                 <div class="input-date">
                     <label for="appointment-date">Please select an appointment date</label>
-                    <input type="date" id="appointment-date" name="appointment-date" value="" min="2022-01-01"
-                        max="2030-12-31" required>
+                    <select name="appointment-date">
+                    {% for date in property.viewing_date.all %}
+                        <option value="{{ date }}">{{ date }}</option>
+                    {% endfor %}
+                    </select>
                 </div>
                 <div class="time-list">
-                    <p id="time-description" class="font-f-m gray-9"></p>
-                    <ul class="font-p-m gray-10">
-                        <li><a href="">10:00</a></li>
-                        <li><a href="">11:00</a></li>
-                        <li class="active"><a href="">12:00</a></li>
-                        <li><a href="">13:00</a></li>
-                        <li><a href="">14:00</a></li>
-                        <li><a href="">15:00</a></li>
-                    </ul>
+                    <label for="appointment-time">Please select an appointment time</label>
+                    <select name="appointment-time">
+                    {% for time in property.viewing_time.all %}
+                        <option value="{{ time }}">{{ time }}</option>
+                    {% endfor %}
+                    </select>
                 </div>
                 <div class="terms">
                     <input type="checkbox" name="terms" id="terms">
