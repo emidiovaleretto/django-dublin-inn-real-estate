@@ -13,7 +13,7 @@
                 <div class="profile-active">
                     {% if user.is_authenticated %}
                         {% if 'placeholder' in profile.avatar.url %}
-                            <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
+                            <img class="avatar" src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
                                 alt="Placeholder image">
                         {% else %}
                             <img class="avatar" src="{{ profile.avatar.url }}" alt="User Picture Profile">
