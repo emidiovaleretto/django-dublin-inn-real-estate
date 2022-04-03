@@ -9,7 +9,11 @@ from user.models import Profile
 @login_required(login_url='/auth/login')
 def index(request, slug):
     property = get_object_or_404(Property, slug=slug)
-    profile = get_object_or_404(Profile.objects.all())
+
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+    else:
+        profile = Profile.objects.all()
 
     context = {
         'property': property,

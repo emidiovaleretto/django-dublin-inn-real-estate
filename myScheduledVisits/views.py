@@ -7,8 +7,12 @@ from user.models import Profile
 @login_required(login_url='/auth/login')
 def my_scheduled_visits(request):
     user = request.user
-    profile = get_object_or_404(Profile.objects.all())
     appointments = PropertyViewing.objects.filter(user=user)
+
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+    else:
+        profile = Profile.objects.all()
 
     context = {
         'appointments': appointments,

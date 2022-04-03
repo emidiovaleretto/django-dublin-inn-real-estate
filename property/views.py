@@ -6,10 +6,14 @@ from user.models import Profile
 
 def property_list(request):
     properties = Property.objects.order_by('-created_at')
-    profile = get_object_or_404(Profile.objects.all())
     paginator = Paginator(properties, 5)
     page = request.GET.get('page')
     per_page = paginator.get_page(page)
+
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+    else:
+        profile = Profile.objects.all()
 
     context = {
         'properties': per_page,
@@ -21,8 +25,13 @@ def property_list(request):
 
 def property_detail(request, slug):
     property = get_object_or_404(Property.objects.filter(slug=slug))
-    profile = get_object_or_404(Profile.objects.all())
     suggestions = Property.objects.exclude(slug=slug)[:2]
+
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+    else:
+        profile = Profile.objects.all()
+
     context = {
         'property': property,
         'profile': profile,
