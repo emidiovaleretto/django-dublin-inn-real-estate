@@ -6,17 +6,17 @@
 {% block title %}{% trans "Signup" %} | Dublin Inn Real Estate{% endblock %}
 
 {% block content %}
-
+{% if form.errors %}
+<div class="errors">
+    {{ form.errors }}
+</div>
+{% endif %}
 <form class="signup container" method="POST" action="{% url 'account_signup' %}">
   {% csrf_token %}
   <div class="signup-form form">
     <h2 class="font-p-m gray-10">Sign up with your best email</h2>
     <div class="col-2">
-      <input type="text" id="id_fname" name="fname" placeholder="First name" autocomplete="off" control-id="ControlID-2"
-        required>
-    </div>
-    <div class="col-2">
-      <input type="text" id="id_lname" name="lname" placeholder="Last name" autocomplete="off" control-id="ControlID-2"
+      <input type="text" id="username" name="username" placeholder="Username" autocomplete="off" control-id="ControlID-2"
         required>
     </div>
     <div class="col-2">
