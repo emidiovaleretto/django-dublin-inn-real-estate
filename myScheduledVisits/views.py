@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from property.models import PropertyViewing
+from property.models import Property, PropertyViewing
 from user.models import Profile
 
 
@@ -20,3 +20,10 @@ def my_scheduled_visits(request):
     }
 
     return render(request, 'my-scheduled-visits.html', context=context)
+
+
+def cancellation(request, id):
+    viewing = get_object_or_404(PropertyViewing, id=id)
+    viewing.status = 2
+    viewing.save()
+    return redirect('my-scheduled-visits')
