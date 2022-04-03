@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.db.models import Q
 from django.core.paginator import Paginator
 from property.models import Property, District, Neighborhood
 from user.models import Profile
@@ -9,7 +8,6 @@ from user.models import Profile
 def index(request):
     properties = Property.objects.all()[:3]
     districts = District.objects.all()
-    neigborhood = Neighborhood.objects.all()
 
     if request.user.is_authenticated:
         profile = Profile.objects.filter(user=request.user).first()
@@ -19,7 +17,6 @@ def index(request):
     context = {
         'properties': properties,
         'districts': districts,
-        'neighborhoods': neigborhood,
         'profile': profile
     }
 
@@ -43,8 +40,8 @@ def property_searching(request):
         if not property_type:
             property_type = [1, 2, 3]
 
-        properties = Property.objects.filter(property_price__gte=min_price).filter(property_price__lte=max_price).filter(
-            Q(neighborhood=location) | Q(district=location)).filter(property_type__in=property_type)
+        properties = Property.objects.filter(property_price__gte=min_price).filter(
+            property_price__lte=max_price).filter(district=location).filter(property_type__in=property_type)
 
         if not properties.exists():
             # TODO Create a 404 template
