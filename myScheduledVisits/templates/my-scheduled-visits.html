@@ -30,6 +30,12 @@
         {% elif appointment.status == 2 %}
             <a class="button cancelled">Cancelled</a>
         {% endif %}
+        <div class="edit-dropdown">
+            <span class="edit"><span>
+            <div class="edit-dropdown__content">
+                <a href="#">Cancel</a>
+            </div>
+        </div>
     </div>
     {% endfor %}
 </div>
