@@ -9,8 +9,10 @@
 {% block content %}
 
 {% if form.errors %}
-  {{ form.non_field_errors }}
-{% endif %}
+<div class="errors">
+    {{ form.non_field_errors }}
+</div>
+  {% endif %}
 
 <form class="login container" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
