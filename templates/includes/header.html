@@ -19,10 +19,16 @@
                             <img class="avatar" src="{{ profile.avatar.url }}" alt="User Picture Profile">
                         {% endif %}
                     <div class="dropdown">
-                        <span class="font-p-s white">{{ user.username }}</span>
+                        <span class="font-p-s white">{{ user.first_name }}</span>
                         <div class="dropdown-content black">
-                            <a href="#">Account</a>
+                        {% if user.is_staff %}
+                            <a href="#">Profile</a>
+                            <a href="#">Admin panel</a>
                             <a href="{% url 'account_logout' %}">Sign out</a>
+                        {% else %}
+                            <a href="#">Profile</a>
+                            <a href="{% url 'account_logout' %}">Sign out</a>
+                        {% endif %}
                         </div>
                     </div>
                     {% else %}
