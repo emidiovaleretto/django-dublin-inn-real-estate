@@ -26,16 +26,16 @@
         <h2 class="font-f-l">{{ appointment.property }}</h2>
         <p class="font-f-s gray-10">{{ appointment.day_for_viewing }} - {{ appointment.time_for_viewing }}</p>
         {% if appointment.status == 1 %}
-            <a class="button">Scheduled</a>
-        {% elif appointment.status == 2 %}
-            <a class="button cancelled">Cancelled</a>
-        {% endif %}
+        <a class="button">Scheduled</a>
         <div class="edit-dropdown">
             <span class="edit"><span>
             <div class="edit-dropdown__content">
-                <a href="#">Cancel</a>
+                <a href="{% url 'cancellation' appointment.id %}">Cancel</a>
             </div>
-        </div>
+        </div>    
+        {% elif appointment.status == 2 %}
+            <a class="button cancelled">Cancelled</a>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
