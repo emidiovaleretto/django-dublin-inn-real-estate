@@ -53,7 +53,10 @@ def property_searching(request):
     else:
         properties = Property.objects.all()
 
-    profile = get_object_or_404(Profile.objects.all())
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+    else:
+        profile = Profile.objects.all()
 
     paginator = Paginator(properties, 5)
     page = request.GET.get('page')
