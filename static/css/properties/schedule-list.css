@@ -96,3 +96,16 @@
 .cancelled:hover {
     background-color: var(--red-button);
 }
+
+@media (max-width: 840px) {
+    .header-list {
+        display: none;
+    }
+    .schedule-list-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .edit-dropdown span {
+        right: -23px;
+    }
+}

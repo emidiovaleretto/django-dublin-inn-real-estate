@@ -103,4 +103,15 @@
     .property-list ul {
         gap: 20px;
     }
+    .property-button a.button {
+        padding: 16px;
+    }
+
+    .options-header h2 {
+        font-size: 2.5rem;
+    }
+    .options h3 {
+        font-size: 1.5rem;
+        margin-top: 8px;
+    }
 }

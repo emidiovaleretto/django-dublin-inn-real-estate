@@ -58,3 +58,15 @@
 .testimonial-list span {
     font-size: 1.5rem;
 }
+
+@media (max-width: 600px) {
+    .testimonial h2 {
+        font-size: 2.5rem;
+    }
+    .testimonial img {
+        left: 112px;
+    }
+    .testimonial li {
+        min-width: 250px;
+    }
+}
