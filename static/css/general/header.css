@@ -16,6 +16,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
+    margin-right: 20px;
 }
 
 .header-menu a {
@@ -121,12 +122,13 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 816px) {
     .header-menu {
         display: flex;
         flex-direction: column;
         gap: 0;
         padding-top: 120px;
+        margin-right: 0;
         align-items: flex-end;
         position: absolute;
         height: 100%;
@@ -172,7 +174,7 @@
 
     #btn-mobile {
         display: flex;
-        padding: 8px 16px;
+        padding: 8px 8px 8px 16px;
         font-size: 1.125rem;
         color: var(--white);
         border: none;
