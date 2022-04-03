@@ -1,7 +1,7 @@
 {% load static %}
 <header class="header-container">
     <div class="header container">
-        <h1><a href="{% url 'index' %}"><img src="{% static 'img/logo.svg' %}" alt="Dublin Inn Real Estate Logo"></a>
+        <h1><a href="{% url 'index' %}"><img class="logo" src="{% static 'img/logo.svg' %}" alt="Dublin Inn Real Estate Logo"></a>
         </h1>
         <nav id="nav" aria-label="primary-nav">
             <button id="btn-mobile" aria-label="Open menu" aria-haspopup="true" aria-controls="menu"
@@ -13,7 +13,7 @@
                 <div class="profile-active">
                     {% if user.is_authenticated %}
                         {% if 'placeholder' in profile.avatar.url %}
-                            <img class="avatar" src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
+                            <img class="avatar" src="https://res.cloudinary.com/emidio-cloud/image/upload/v1649009881/avatar_veixgh.jpg" 
                                 alt="Placeholder image">
                         {% else %}
                             <img class="avatar" src="{{ profile.avatar.url }}" alt="User Picture Profile">
