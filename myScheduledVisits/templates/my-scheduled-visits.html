@@ -27,16 +27,14 @@
         <p class="font-f-s gray-10">{{ appointment.day_for_viewing }} - {{ appointment.time_for_viewing }}</p>
         {% if appointment.status == 1 %}
         <a class="button">Scheduled</a>
-        <div class="edit-dropdown">
-            <span class="edit"><span>
-            <div class="edit-dropdown__content">
-                <a href="{% url 'cancellation' appointment.id %}">Cancel</a>
-            </div>
-        </div>    
+        <a href="{% url 'cancellation' appointment.id %}" class="button cancelled">Cancel</a>
         {% elif appointment.status == 2 %}
-            <a class="button cancelled">Cancelled</a>
+        <a class="button cancelled">Cancelled</a>
         {% endif %}
     </div>
     {% endfor %}
 </div>
+
+{% include 'includes/pagination.html' %}
+
 {% endblock %}
