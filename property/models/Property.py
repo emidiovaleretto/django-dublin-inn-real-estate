@@ -14,7 +14,7 @@ class Property(models.Model):
     property_category = models.IntegerField(
         choices=PROPERTY_CATEGORY, default=2)
     property_type = models.IntegerField(choices=PROPERTY_TYPE, default=1)
-    property_price = models.IntegerField()
+    property_price = models.FloatField()
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()
     metreage = models.FloatField()
