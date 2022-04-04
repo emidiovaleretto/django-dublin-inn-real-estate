@@ -10,9 +10,11 @@
 
 {% if form.errors %}
 <div class="errors">
-    {{ form.non_field_errors }}
+  {{ form.non_field_errors }}
 </div>
-  {% endif %}
+{% endif %}
+
+{% get_providers as socialaccount_providers %}
 
 <form class="login container" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
@@ -26,19 +28,26 @@
       <input type="password" id="id_password" name="password" placeholder="Password" autocomplete="off"
         control-id="ControlID-3" required>
     </div>
+    
     <a class="secondaryAction font-f-s gray-7" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?"%}</a>
     <button class="button" type="submit">Sign in</button>
     <span class="font-f-s gray-8 col-2">Not a member? Sign up for <a href="{{ signup_url }}"
         class="underline black">free</a></span>
+
+    {% if socialaccount_providers %}
     <div class="form-social-login col-2">
       <p class="font-f-s gray-7">Login with</p>
       <div class="icons">
-        <a href=""><img src="{% static 'img/icons/facebook-black.svg' %}" alt="Icon Facebook"></a>
-        <a href=""><img src="{% static 'img/icons/twitter.svg' %}" alt="Icon Twitter"></a>
-        <a href=""><img src="{% static 'img/icons/google.svg' %}" alt="Icon Google"></a>
+        {% for provider in socialaccount_providers %}
+        <a title="{{ provider.name }}"
+          href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+          <img src="../../static/img/icons/{{ provider.name }}.svg" alt="Icon {{ provider.name }}"></a>
+        {% endfor %}
       </div>
     </div>
+    {% endif %}
   </div>
+
   <div class="login-image"></div>
 </form>
 

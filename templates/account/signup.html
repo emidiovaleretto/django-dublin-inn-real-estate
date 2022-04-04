@@ -2,15 +2,20 @@
 {% load static %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
 {% block title %}{% trans "Signup" %} | Dublin Inn Real Estate{% endblock %}
 
 {% block content %}
+
 {% if form.errors %}
 <div class="errors">
     {{ form.errors }}
 </div>
 {% endif %}
+
+{% get_providers as socialaccount_providers %}
+
 <form class="signup container" method="POST" action="{% url 'account_signup' %}">
   {% csrf_token %}
   <div class="signup-form form">
@@ -35,21 +40,28 @@
       <input type="checkbox" name="terms" id="terms">
       <label class="font-f-xs gray-11" for="terms">I agree to the <a href="" class="bold underline">Terms of Service</a>.</label>
   </div>
+
     {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
+
     <button class="button col-2" type="submit">Create account</button>
     <span class="font-f-s gray-8 col-2">Already have an account? <a href="{{ login_url }}"
         class="underline black">Sign in</a></span>
+
+    {% if socialaccount_providers %}
     <div class="form-social-login col-2">
       <p class="font-f-s gray-7">Sign up with</p>
       <div class="icons">
-        <a href=""><img src="{% static 'img/icons/facebook-black.svg' %}" alt="Icon Facebook"></a>
-        <a href=""><img src="{% static 'img/icons/twitter.svg' %}" alt="Icon Twitter"></a>
-        <a href=""><img src="{% static 'img/icons/google.svg' %}" alt="Icon Google"></a>
+        {% for provider in socialaccount_providers %}
+        <a title="{{ provider.name }}" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+          <img src="../../static/img/icons/{{ provider.name }}.svg" alt="Icon {{ provider.name }}"></a>
+        {% endfor %}
       </div>
     </div>
+    {% endif %}
   </div>
+  
   <div class="signup-image"></div>
 </form>
 
