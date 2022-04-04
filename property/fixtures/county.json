@@ -1,9 +1,0 @@
-[{
-    "model": "property.county",
-    "pk": 1,
-    "fields": {
-        "name": "Dublin",
-        "created_at": "2022-03-16T17:08:04.176Z",
-        "updated_at": "2022-03-16T17:08:04.176Z"
-    }
-}]
