@@ -16,8 +16,9 @@ def property_list(request):
         profile = Profile.objects.all()
 
     context = {
+        'profile': profile,
         'properties': per_page,
-        'profile': profile
+        'pagination': per_page,
     }
 
     return render(request, 'properties.html', context=context)
