@@ -26,8 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-function changeImage(imgs) {
-    let expandImg = document.getElementById("first");
-    expandImg.src = imgs.src;
-    expandImg.parentElement.style.display = "flex";
-}
+const galery = document.querySelectorAll(".property-image img");
+const galeryContainer = document.querySelector(".property-image");
+
+galery.forEach((img) => {
+    img.addEventListener("click", (event) => {
+        let img = event.currentTarget;
+        let media = matchMedia("(min-width: 940px)").matches;
+
+        if (media) {
+            galeryContainer.prepend(img)
+        }
+    })
+});
