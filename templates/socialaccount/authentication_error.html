@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Social Network Login Failure" %}{% endblock %}
+
+{% block content %}
+<div class="social-login container">
+<img src="{% static 'img/error.svg' %}" alt="Error" width='300'>
+<h1 class="font-p-xl gray-10">{% trans "Social Network Login Failure" %}</h1>
+<p class="font-f-m gray-8">{% trans "An error occurred while attempting to login via your social network account." %}</p>
+<a class="button" href="{% url 'account_login' %}">Go back to login</a>
+</div>
+{% endblock %}
