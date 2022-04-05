@@ -36,12 +36,12 @@ def property_searching(request):
         if not max_price:
             max_price = 10000
         if not location:
-            location = 1
+            location = District.objects.all()
         if not property_type:
             property_type = [1, 2, 3]
 
         properties = Property.objects.filter(property_price__gte=min_price).filter(
-            property_price__lte=max_price).filter(district=location).filter(property_type__in=property_type)
+            property_price__lte=max_price).filter(district__in=location).filter(property_type__in=property_type)
 
         if not properties.exists():
             # TODO Create a 404 template
@@ -60,6 +60,7 @@ def property_searching(request):
     per_page = paginator.get_page(page)
 
     context = {
+        'pagination': per_page,
         'properties': per_page,
         'profile': profile
     }
