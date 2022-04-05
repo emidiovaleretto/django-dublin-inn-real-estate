@@ -44,8 +44,7 @@ def property_searching(request):
             property_price__lte=max_price).filter(district__in=location).filter(property_type__in=property_type)
 
         if not properties.exists():
-            # TODO Create a 404 template
-            return HttpResponse('<h1>No properties available</h1>')
+            return render(request, '404.html')
 
     else:
         properties = Property.objects.all()
