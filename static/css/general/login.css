@@ -103,6 +103,17 @@
     margin-left: 12px;
 }
 
+/* Social Login */
+
+.social-login {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 32px;
+    margin: 120px auto;
+    padding: 60px;
+}
+
 @media (max-width: 1200px) {
     #login h1 {
         padding-bottom: 0;
