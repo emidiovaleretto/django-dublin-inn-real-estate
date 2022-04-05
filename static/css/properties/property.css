@@ -16,7 +16,7 @@
     min-width: 200px;
 }
 
-.property-image img#first {
+.property-image img:first-child {
     min-width: 100%;
 }
 
