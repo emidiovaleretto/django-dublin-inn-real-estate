@@ -34,6 +34,11 @@
     - [PropertyViewing Table](#propertyviewing-table)
     - [PropertyViewingDate Table](#propertyviewingdate-table)
     - [PropertyViewingTime Table](#propertyviewingtime-table)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks](#frameworks)
+  - [Libraries](#libraries)
+  - [Tools](#tools)
 
 # Briefing
 
@@ -152,8 +157,7 @@ With this information I have chosen to use the following colours to provide a gr
 The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details below 👇
 
 <div style="text-align: center;">
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" 
-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen  data-external="1"></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 </div>
 
 # Information Architecture
@@ -304,6 +308,41 @@ Once a user registers in the system, a profile is automatically created for that
 | Time for viewing | time_for_viewing | No Validation     | TimeField     |
 | Created at       | created_at       | auto_now_add=True | DateTimeField |
 | Updated at       | updated_at       | auto_now_add=True | DateTimeField |
+
+
+[Back to top ⇧](#table-of-contents)
+
+
+# Technologies Used
+
+## Languages
+
+1. **HTML5, or Hyper Text Markup Language:** Used to construct the page within this app -   
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+2. **CSS3, or Cascading Style Sheets:** Used to style the various elements on the app's pages via coloring, fonts, spacing, etc. - 
+https://www.w3.org/Style/CSS/Overview.en.html
+
+3. **Javascript:** Used to create iterations across the page. - https://www.javascript.com/
+
+4. **Python:** Used to develop all application logic. (https://www.python.org/)
+
+## Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Jquery](https://jquery.com/)
+
+## Libraries
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+## Tools
+
+- [Heroku](https://www.heroku.com)
+- [Git](https://git-scm.com/)
+- [Postgres](https://www.postgresql.org/)
+- [Db Diagram](https://dbdiagram.io/home)
+- [Figma](https://figma.com)
 
 
 [Back to top ⇧](#table-of-contents)
