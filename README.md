@@ -1,10 +1,17 @@
+ <img src="./readme-files/imgs/cover.jpg">
+
  # Dublin Inn Real Estate
 
-> ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
+# Table of Contents
 
-> **For educational purposes only.
+- [Dublin Inn Real Estate](#dublin-inn-real-estate)
+- [Table of Contents](#table-of-contents)
+- [Briefing](#briefing)
+  - [Challenge](#challenge)
+  - [Business Rules](#business-rules)
+  - [Screens](#screens)
 
-## Briefing
+# Briefing
 
 **Dublin Inn Real Estate** is a specialist rental company across Ireland. Based in Dublin, the company has a simple website that receives around 2,000 simultaneous hits per day.
 
@@ -47,13 +54,3 @@ In the system, there will be the following user functionalities:
     - can log in and out of the application.
     - manage his/her own profile.
     - form to search for properties.
-
-# User Interface UI
-
-## Skeleton
-
- The wireframes were created in [Figma](https://www.figma.com/).
-
-### Desktop Homepage
-
-<img src="./readme-files/wireframes/desktop_homepage.jpg" width="560" height="2412">
