@@ -18,8 +18,8 @@
       - [Admin](#admin)
       - [Developer](#developer)
   - [Design Choices](#design-choices)
-    - [Fonts](#fonts)
-    - [Colours](#colours)
+    - [Typography](#typography)
+    - [Color palette](#color-palette)
 - [User Interface | UI](#user-interface--ui)
   - [Skeleton](#skeleton)
 - [Information Architecture](#information-architecture)
@@ -39,6 +39,9 @@
   - [Frameworks](#frameworks)
   - [Libraries](#libraries)
   - [Tools](#tools)
+  - [Acknowledgements](#acknowledgements)
+  - [Disclaimer](#disclaimer)
+  - [Author](#author)
 
 # Briefing
 
@@ -128,7 +131,7 @@ In the system, there will be the following user functionalities:
 
 ## Design Choices
 
-### Fonts
+### Typography
 
 As a primary font, I have chosen to use [Poppins](https://fonts.google.com/specimen/Poppins) as it has a geometric in style, clean, and includes 18 different font weights, from thin to black. Also, Poppins is great for both headlines and paragraph copy to improve readability and style.
 
@@ -138,7 +141,7 @@ For the Logo I have chosen to use [Gorditas](https://fonts.google.com/specimen/G
 
 <img src="./readme-files/imgs/typography.jpg"/>
 
-### Colours
+### Color palette
 
 Talking to the marketing team at **Dublin Inn Real Estate**, they informed me that the CEO would like the site to have references to the colors of the Irish flag.
 
@@ -157,7 +160,8 @@ With this information I have chosen to use the following colours to provide a gr
 The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details below 👇
 
 <div style="text-align: center;">
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" 
+src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1"></iframe>
 </div>
 
 # Information Architecture
@@ -344,5 +348,28 @@ https://www.w3.org/Style/CSS/Overview.en.html
 - [Db Diagram](https://dbdiagram.io/home)
 - [Figma](https://figma.com)
 
+
+[Back to top ⇧](#table-of-contents)
+
+## Acknowledgements
+
+I would like to take the opportunity to thank:
+
+ - To God first, to my family, friends and colleagues for their advice, support and help with testing.
+ - To my mentors Felipe Alarcon & Richard Wells for their feedback, advices, support and, above all, for their patience.
+ - All Code Institute Tutors and Community on Slack for the peer reviews and advice.
+
+
+## Disclaimer
+
+> ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
+
+> **For educational purposes only.
+
+## Author
+
+Made with ❤️ by <b>Emidio Valereto</b> 👋🏽 Get in touch!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Emidio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/emidiovalereto/)](https://www.linkedin.com/in/emidiovalereto/) [![Gmail Badge](https://img.shields.io/badge/-emidio.valereto@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:emidio.valereto@gmail.com)](mailto:emidio.valereto@gmail.com)
 
 [Back to top ⇧](#table-of-contents)
