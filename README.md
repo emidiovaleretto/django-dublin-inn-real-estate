@@ -17,6 +17,9 @@
       - [User](#user)
       - [Admin](#admin)
       - [Developer](#developer)
+  - [Design Choices](#design-choices)
+    - [Fonts](#fonts)
+    - [Colours](#colours)
 
 # Briefing
 
@@ -102,3 +105,28 @@ In the system, there will be the following user functionalities:
 - As a **Developer** I want to ensure that **all application features work** as they were implemented to work.
 - As a **Developer** I want to ensure **an authenticated user can access** all required information correctly.
 - As a **Developer** I want to **work together with the administrator** of the site for **improvements** for the user of the same.
+
+
+## Design Choices
+
+### Fonts
+
+As a primary font, I have chosen to use [Poppins](https://fonts.google.com/specimen/Poppins) as it has a geometric in style, clean, and includes 18 different font weights, from thin to black. Also, Poppins is great for both headlines and paragraph copy to improve readability and style.
+
+As a secondary font I have chosen to use [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) to compliment the site content and allow for the extra content to stand out from the rest of the site content. Furthermore, the Fira font family also aim to cover the legibility needs for a large range of handsets varying in screen quality and rendering.
+
+For the Logo I have chosen to use [Gorditas](https://fonts.google.com/specimen/Gorditas) because it is a fun and funky display slab **serif typeface family**, with heart details, which fit perfectly into the design thought for the project.
+
+<img src="./readme-files/imgs/typography.jpg"/>
+
+### Colours
+
+Talking to the marketing team at **Dublin Inn Real Estate**, they informed me that the CEO would like the site to have references to the colors of the Irish flag.
+
+<img src="./readme-files/imgs/color_reference.jpg"/>
+
+With this information I have chosen to use the following colours to provide a great contrast and to help the content stand out.
+
+<img src="./readme-files/imgs/color_pallete.jpg"/>
+
+[Back to top ⇧](#table-of-contents)
