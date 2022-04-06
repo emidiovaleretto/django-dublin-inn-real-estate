@@ -1,6 +1,6 @@
- <img src="./readme-files/imgs/cover.jpg">
+<img src="./readme-files/imgs/cover.jpg">
 
- # Dublin Inn Real Estate
+# Dublin Inn Real Estate
 
 # Table of Contents
 
@@ -10,6 +10,13 @@
   - [Challenge](#challenge)
   - [Business Rules](#business-rules)
   - [Screens](#screens)
+- [User Experience](#user-experience)
+  - [Goals](#goals)
+    - [Visitor Goals](#visitor-goals)
+    - [User Stories](#user-stories)
+      - [User](#user)
+      - [Admin](#admin)
+      - [Developer](#developer)
 
 # Briefing
 
@@ -54,3 +61,44 @@ In the system, there will be the following user functionalities:
     - can log in and out of the application.
     - manage his/her own profile.
     - form to search for properties.
+
+
+[Back to top ⇧](#table-of-contents)
+
+
+# User Experience
+
+## Goals
+
+### Visitor Goals
+
+- Provide access to high standard properties for visitors to browse
+- Give potential clients a testimonial from previous clients about their satisfaction using the company's services.
+- Allow visitors the option to book a property visit directly from the site.
+- Allow the visitor to be able to search for a property according to its location, type of property (Studio, Apartment or House) and price.
+- Allow the visitor to be able to create an account and manage their own content in the site.
+
+### User Stories
+
+#### User
+
+- As a **Site User** I can **register an account** so that **I can favourite the properties I like and book a visit**.
+- As a **Site User** I can **filter a property according to its price** so that **I can choose the one that best suits my budget**.
+- As a **Site User** I can **filter a property according to its type** so that **I can choose the one that fits on my needs**.
+- As a **Site User** I can **filter a property according to its location** so that **I can choose the one that are of interest to me**.
+- As a **Site User** **I can click on a property** so that **I can read the full content**.
+- As a **Site User** I can **schedule a day and time** so that **I can visit the property when it's convenient for me**.
+- As a **Site User** I can **see all visits scheduled as well as modify or cancel** so that **I can manage my scheduled visits**.
+- As a **Site User**, I expect to **have a button** so that I can sign up for the site using my **Facebook** or **Gmail accounts**.
+
+#### Admin
+
+- As a **Site Admin** I want to be able to **add a new property easily**.
+- As a **Site Admin** I want to be able to **see all existing properties** in a simple and easy manner.
+- As a **Site Admin** I want to be able to **manage the existing properties such as edit price or delete** easily.
+
+#### Developer
+
+- As a **Developer** I want to ensure that **all application features work** as they were implemented to work.
+- As a **Developer** I want to ensure **an authenticated user can access** all required information correctly.
+- As a **Developer** I want to **work together with the administrator** of the site for **improvements** for the user of the same.
