@@ -137,7 +137,9 @@ With this information I have chosen to use the following colours to provide a gr
 
 ## Skeleton
 
- The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details below 👇
+The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details below 👇
 
- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen></iframe> 
-
+<div style="text-align: center;">
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" 
+src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+</div>
