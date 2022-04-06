@@ -10,7 +10,7 @@
   - [Challenge](#challenge)
   - [Business Rules](#business-rules)
   - [Screens](#screens)
-- [User Experience](#user-experience)
+- [User Experience | UX](#user-experience--ux)
   - [Goals](#goals)
     - [Visitor Goals](#visitor-goals)
     - [User Stories](#user-stories)
@@ -20,6 +20,8 @@
   - [Design Choices](#design-choices)
     - [Fonts](#fonts)
     - [Colours](#colours)
+- [User Interface | UI](#user-interface--ui)
+  - [Skeleton](#skeleton)
 
 # Briefing
 
@@ -69,7 +71,7 @@ In the system, there will be the following user functionalities:
 [Back to top ⇧](#table-of-contents)
 
 
-# User Experience
+# User Experience | UX
 
 ## Goals
 
@@ -130,3 +132,12 @@ With this information I have chosen to use the following colours to provide a gr
 <img src="./readme-files/imgs/color_pallete.jpg"/>
 
 [Back to top ⇧](#table-of-contents)
+
+# User Interface | UI
+
+## Skeleton
+
+ The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details below 👇
+
+ <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen></iframe> 
+
