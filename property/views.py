@@ -5,6 +5,10 @@ from user.models import Profile
 
 
 def property_list(request):
+    ''' This function is used to retrieve all
+    the properties from the database and render
+    them on the property_list.html page '''
+
     properties = Property.objects.order_by('-created_at')
     paginator = Paginator(properties, 5)
     page = request.GET.get('page')
@@ -25,6 +29,9 @@ def property_list(request):
 
 
 def property_detail(request, slug):
+    ''' This function display the details of
+    a property as per the user choice '''
+
     property = get_object_or_404(Property.objects.filter(slug=slug))
     suggestions = Property.objects.exclude(slug=slug)[:2]
 

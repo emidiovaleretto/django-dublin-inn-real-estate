@@ -1,7 +1,9 @@
+// This event fires as soon as the page loaded.
 document.addEventListener('DOMContentLoaded', () => {
 
     const btnMobile = document.getElementById("btn-mobile");
 
+    // This function handles the click event on the button
     function toggleMenu(event) {
         if (event.type === 'touchstart') {
             event.preventDefault();
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnMobile.addEventListener('click', toggleMenu);
     btnMobile.addEventListener('touchstart', toggleMenu);
 
-
+    // This function handles to get the current year
     $('.current_year').text(new Date().getFullYear());
 
 });
@@ -29,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const galery = document.querySelectorAll(".property-image img");
 const galeryContainer = document.querySelector(".property-image");
 
+// This function handles the click event on the image
+// and shows the clicked image in the bigger container
 galery.forEach((img) => {
     img.addEventListener("click", (event) => {
         let img = event.currentTarget;
