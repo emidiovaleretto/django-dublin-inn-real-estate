@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         event.currentTarget.setAttribute('aria-expanded', active);
 
         if (active) {
-            event.currentTarget.setAttribute('aria-label', 'Close menu')
+            event.currentTarget.setAttribute('aria-label', 'Close menu');
         } else {
-            event.currentTarget.setAttribute('aria-label', 'Open menu')
+            event.currentTarget.setAttribute('aria-label', 'Open menu');
         }
     }
 
@@ -39,7 +39,7 @@ galery.forEach((img) => {
         let media = matchMedia("(min-width: 940px)").matches;
 
         if (media) {
-            galeryContainer.prepend(img)
+            galeryContainer.prepend(img);
         }
-    })
+    });
 });
