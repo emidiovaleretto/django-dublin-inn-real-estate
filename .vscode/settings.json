@@ -1,34 +1,37 @@
 {
-   "python.linting.pylintEnabled": true,
-   "python.linting.enabled": false,
-   "python.linting.pycodestyleEnabled": false,
-   "python.linting.flake8Enabled": true,
-   "python.terminal.activateEnvironment": false,
-   "python.formatting.autopep8Path": "/home/gitpod/.pyenv/shims/autopep8",
-   "python.linting.flake8Path": "/home/gitpod/.pyenv/shims/flake8",
-   "cornflakes.linter.executablePath": "/home/gitpod/.pyenv/shims/flake8",
-   "files.exclude": {
-      "**/.DS_Store": true,
-      "**/.git": true,
-      "**/.github": true,
-      "**/.gitp*": true,
-      "**/.hg": true,
-      "**/.svn": true,
-      "**/.vscode": true,
-      "**/core.Microsoft*": true,
-      "**/core.mongo*": true,
-      "**/core.python*": true,
-      "**/CVS": true
-   },
-   "files.autoSave": "off",
-   "workbench.colorTheme": "Visual Studio Dark",
-   "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify",
-   "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features"
-   },
-   "[python]": {
-      "editor.defaultFormatter": "ms-python.python"
-   },
-   "python.formatting.provider": "black"
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": false,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.terminal.activateEnvironment": false,
+  "python.formatting.autopep8Path": "/home/gitpod/.pyenv/shims/autopep8",
+  "python.linting.flake8Path": "/home/gitpod/.pyenv/shims/flake8",
+  "cornflakes.linter.executablePath": "/home/gitpod/.pyenv/shims/flake8",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.github": true,
+    "**/.gitp*": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/.vscode": true,
+    "**/core.Microsoft*": true,
+    "**/core.mongo*": true,
+    "**/core.python*": true,
+    "**/CVS": true
+  },
+  "files.autoSave": "off",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "terminal.integrated.gpuAcceleration": "canvas",
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.formatting.provider": "yapf"
 }

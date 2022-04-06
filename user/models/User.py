@@ -10,7 +10,9 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
     token = models.CharField(max_length=255, null=True, blank=True)
     avatar = CloudinaryField('image', default='placeholder')
-    favourites = models.ManyToManyField(Property, blank=True, related_name='favourites')
+    favourites = models.ManyToManyField(Property,
+                                        blank=True,
+                                        related_name='favourites')
 
     def __str__(self):
         return self.user.username
@@ -29,5 +31,3 @@ class Profile(models.Model):
             instance.profile.save()
         except:
             pass
-        
-    
