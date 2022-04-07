@@ -109,9 +109,36 @@
     display: grid;
     justify-content: center;
     justify-items: center;
-    gap: 32px;
-    margin: 120px auto;
+    margin: 60px auto;
     padding: 60px;
+}
+
+._404-page {
+    background: var(--white);
+}
+
+._404-bg {
+    background: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif") no-repeat center;
+    height: 400px;
+}
+
+._404-bg h1 {
+    text-align: center;
+}
+
+.social-login p {
+    margin-bottom: 40px;
+}
+
+.social-login a.button {
+    color: var(--primary-color-5);
+    background-color: transparent;
+    border: 2px solid var(--primary-color-5);
+}
+
+.social-login a.button:hover {
+    color: var(--white);
+    background: var(--primary-color-5);
 }
 
 @media (max-width: 1200px) {
@@ -153,5 +180,12 @@
     .login-form .last-name {
         grid-row: 3;
         grid-column: span 2;
+    }
+    ._404-bg h1 {
+        font-size: 2.5rem;
+    }
+    .social-login p {
+        font-size: 1rem;
+        text-align: center;
     }
 }

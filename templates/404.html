@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Dublin Inn Real Estate | Find your dream house{% endblock %}
+{% block title %}404 Page Not Found{% endblock %}
 
 {% block content %}
-
-<div class="social-login container">
-    <h1 class="font-p-xxl gray-10">Oops! Not found!</h1>
-    <p class="font-f-m gray-8">Sorry, we're still haven't found what you're looking for.</p>
-    <img src="{% static 'img/404.svg' %}" alt="404 Error" width="400">
-    <a class="button" href="{% url 'index' %}">Back to Home</a>
-</div>    
+<body style="background: white;">
+    <section class="_404-page">
+        <div class="social-login container">
+            <div class="_404-bg">
+                <h1 class="font-p-xxl gray-10">Whoops! Not found!</h1>
+            </div>
+            <p class="font-f-m gray-9">Sorry, we're still haven't found what you're looking for.</p>
+            <a class="button" href="{% url 'index' %}">Back to Home</a>
+        </div>
+    </section>
+</body>
 {% endblock %}
