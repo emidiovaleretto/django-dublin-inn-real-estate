@@ -1,9 +1,9 @@
 from .settings import *
 from decouple import config
 
-DEBUG = config("DEBUG")
+DEBUG = True
 SECRET_KEY = config("SECRET_KEY_DEVELOPMENT")
-ALLOWED_HOSTS = [config("HOST")]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 DATABASES = {
     'default': {
