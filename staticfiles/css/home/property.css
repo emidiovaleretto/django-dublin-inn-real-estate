@@ -1,0 +1,117 @@
+.property-list {
+    padding-bottom: 120px;
+}
+
+.property-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-home {
+    position: relative;
+}
+
+.link-home::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-color-5);
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.link-home:hover::after {
+    width: 100%;
+}
+
+.property-list h2 {
+    margin-bottom: 40px;
+}
+
+.property-list ul {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px 20px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.property-list li {
+    flex: 1;
+    min-width: 280px;
+}
+
+.property-list a {
+    display: block;
+}
+
+.property-list img[src$=".jpg"] {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    margin-bottom: 16px;
+}
+
+.property-list h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.property-list h3::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-right: 8px;
+    background-color: var(--primary-color-5);
+    transition: width 0.2s;
+}
+
+.property-list a:hover h3::before {
+    width: 24px;
+}
+
+.property-list img[src$=".jpg"]:hover {
+    opacity: .9;
+    transition: .3s;
+}
+
+.icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+
+@media (max-width: 800px) {
+    .property-list h2 {
+        font-size: 3rem;
+    }
+
+    .property-list {
+        padding-bottom: 60px;
+    }
+
+    .link-home {
+        margin-bottom: 20px;
+    }
+
+    .property-list ul {
+        gap: 20px;
+    }
+    .property-button a.button {
+        padding: 16px;
+    }
+
+    .options-header h2 {
+        font-size: 2.5rem;
+    }
+    .options h3 {
+        font-size: 1.5rem;
+        margin-top: 8px;
+    }
+}

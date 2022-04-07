@@ -1,0 +1,81 @@
+#header {
+    background-color: #095831;
+}
+
+#branding img {
+    width: 130px;
+    margin-left: 10px;
+}
+
+
+#user-tools a:focus,
+#user-tools a:hover {
+    border-bottom-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+a:link,
+a:visited {
+    color: #095831;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+    background: #095831;
+    color: #FFFFFF;
+}
+
+div.breadcrumbs {
+    background: #ff9900b3;
+    color: #2E2E2E;
+}
+
+div.breadcrumbs a {
+    color: #2E2E2E;
+}
+
+div.breadcrumbs a:hover {
+    color: #095831;
+}
+
+.content {
+    background-color: #fff;
+}
+
+.object-tools a:link,
+.object-tools a:visited {
+    background-color: #095831;
+}
+
+.paginator a:link,
+.paginator a:visited {
+    background: #095831 !important;
+    color: #FFFFFF;
+}
+
+.paginator a:hover {
+    background: #054424 !important;
+}
+
+.submit-row input[type=submit] {
+    background-color: #095831;
+}
+
+.button.default:active,
+input[type=submit].default:active,
+.button.default:focus,
+input[type=submit].default:focus,
+.button.default:hover,
+input[type=submit].default:hover {
+    background: #054424;
+}
+
+#changelist-filter li.selected a {
+    color: #095831 !important;
+}
+
+.selector-chosen h2 {
+    background: #ff9900b3 !important;
+    color: #2E2E2E !important;
+}

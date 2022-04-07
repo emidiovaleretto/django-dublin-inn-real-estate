@@ -1,0 +1,50 @@
+.font-p-xxl {
+    font: 600 4rem/1.125 "Poppins", sans-serif;
+}
+
+.font-p-xl {
+    font: 600 2rem/1.25 "Poppins", sans-serif;
+}
+
+.font-p-l {
+    font: 400 1.5rem/1.5 "Poppins", sans-serif;
+}
+
+.font-f-l {
+    font: 400 1.5rem/1.5 "Fira Sans", sans-serif;
+}
+
+.font-f-l-b {
+    font: 500 1.5rem/1.5 "Fira Sans", sans-serif;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+}
+
+.font-p-m {
+    font: 400 1.125rem/1.33 "Poppins", sans-serif;
+}
+
+.font-p-m-b {
+    font: 600 1.125rem/1.33 "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+.font-f-m {
+    font: 400 1.125rem/1.33 "Fira Sans", sans-serif;
+}
+
+.font-p-s {
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+}
+
+.font-f-s {
+    font: 400 1rem/1.5 "Fira Sans", sans-serif;
+}
+
+.font-f-xs {
+    font: 400 0.875rem/1.43 "Fira Sans", sans-serif;
+}
+
+.font-p-xs {
+    font: 600 0.75rem/1.33 "Poppins", sans-serif;
+}

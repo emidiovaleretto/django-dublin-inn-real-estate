@@ -1,0 +1,145 @@
+.property {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 40px;
+}
+
+.property-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.property-image img {
+    flex: 1;
+    min-width: 200px;
+}
+
+.property-image img:first-child {
+    min-width: 100%;
+}
+
+.property-inner-content > p {
+    margin-bottom: 32px;
+}
+
+.property-button {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    justify-items: start;
+    gap: 8px 12px;
+    margin-bottom: 40px;
+}
+
+.property-button a {
+    grid-row: span 2;
+}
+
+.property-button span {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--gray-2);
+    gap: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.property-inner-content h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+    margin-bottom: 12px;
+}
+
+.property-facilities {
+    padding: 32px;
+    background-color: rgba(255, 153, 0, 0.3);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.property-facilities img {
+    max-width: 24px;
+    margin-bottom: 8px;
+}
+
+.property-facilities h3 {
+    margin-bottom: 8px;
+}
+
+.property-map {
+    margin-bottom: 120px;
+}
+
+.property-map h2 {
+    margin-bottom: 8px;
+}
+
+.options {
+    margin-bottom: 120px;
+}
+
+.options-header {
+    margin-bottom: 40px;
+}
+
+.options ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.options h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.options h3::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-right: 8px;
+    background-color: var(--primary-color-5);
+    transition: width 0.2s;
+}
+
+.options a:hover h3::before {
+    width: 24px;
+}
+
+.options img[src$=".jpg"]:hover {
+    opacity: .9;
+    transition: .3s;
+}
+
+@media (max-width: 800px) {
+    .property {
+        grid-template-columns: 1fr;     
+    }
+    .property-image {
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    .title h1 {
+        font-size: 3rem;
+    }
+    .property-facilities,
+    .property-button {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .options ul {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,145 @@
+.intro-bg {
+    box-shadow: inset 0 -120px var(--gray-1);
+    margin-bottom: 120px;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+    position: relative;
+}
+
+.intro-content {
+    align-self: end;
+    padding-bottom: 200px;
+}
+
+.intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 4px 4px;
+}
+
+h2 {
+    margin-bottom: 32px;
+}
+
+.intro p {
+    margin-bottom: 20px;
+}
+
+.intro-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 4px;
+    position: absolute;
+    bottom: -32px;
+    left: 120px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 24px;
+}
+
+.intro-form p {
+    margin-left: 16px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+/* Search Form */
+
+.form-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+}
+
+input[type=text],
+.form-content select {
+    padding: 16px;
+    background: var(--gray-1);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+}
+
+input[type=text]:focus,
+.form-content select:focus {
+    outline: none;
+    border-color: var(--primary-color-7);
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+button.button {
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.button-search {
+    padding-right: 40px;
+}
+
+button.button-search::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../../img/icons/icon-search.3cec5b7b10f3.svg") no-repeat;
+    right: 0;
+    position: absolute;
+    margin-right: 16px;
+}
+
+@media (max-width: 1200px) {
+    .intro h2 {
+        font-size: 3rem;
+    }
+
+    .intro p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro-bg {
+        margin: 60px 0;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .intro-content {
+        padding-bottom: 0;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    .intro img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .intro-form {
+        position: relative;
+        left: 0;
+    }
+
+    .form-content input[type=text],
+    .form-content select {
+        width: 100%;
+    }
+}

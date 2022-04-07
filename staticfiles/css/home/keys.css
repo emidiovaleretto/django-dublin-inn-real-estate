@@ -1,0 +1,93 @@
+.keys-bg {
+    background-color: var(--gray-2);
+    box-shadow: inset 0 80px var(--gray-1), inset 0 -80px var(--gray-1);
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.keys-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.keys-content {
+    padding: 80px 0;
+}
+
+.keys-content > span {
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.keys-content h2 {
+    margin-bottom: 32px;
+}
+
+.keys-content > p {
+    margin-bottom: 20px;
+}
+
+.keys a {
+    margin-bottom: 80px;
+}
+
+.keys-benefits {
+    display: flex;
+    gap: 40px;
+}
+
+.keys-benefits h3 {
+    margin-bottom: 8px;
+    width: max-content;
+}
+
+.keys-benefits p {
+    margin-bottom: 80px;
+}
+
+
+@media (max-width: 800px) {
+    .keys-bg {
+        box-shadow: initial;
+    }
+
+    .keys {
+        grid-template-columns: 1fr;
+    }
+
+    .keys-content > span {
+        margin-top: 20px;
+    }
+
+    .keys-content {
+        padding: 60px 0;
+    }
+
+    .keys-image {
+        display: none;
+    }
+
+    .keys a {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .keys-benefits {
+        flex-direction: column;
+    }
+
+    .keys-benefits p {
+        margin-bottom: 16px;
+    }
+}   

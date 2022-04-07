@@ -1,0 +1,29 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Poppins:wght@400;600&display=swap');
+
+/* CSS stylesheets */
+
+/* General */
+@import "./general/general.css";
+@import "./general/header.css";
+@import "./general/footer.css";
+@import "./general/login.css";
+@import "./general/signup.css";
+
+/* Utilities */
+@import "./utilities/components.css";
+@import "./utilities/typography.css";
+@import "./utilities/colors.css";
+
+/* Home */
+@import "./home/intro.css";
+@import "./home/property.css";
+@import "./home/features.css";
+@import "./home/keys.css";
+@import "./home/testimonial.css";
+
+/* Properties */
+@import "./properties/properties.css";
+@import "./properties/property.css";
+@import "./properties/schedule.css";
+@import "./properties/schedule-list.css";
