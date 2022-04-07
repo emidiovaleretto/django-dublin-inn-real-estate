@@ -29,6 +29,10 @@
 
 
 @media (max-width: 800px) {
+    .features {
+        padding-bottom: 60px;
+    }
+
     .features h2 {
         font-size: 3rem;
     }

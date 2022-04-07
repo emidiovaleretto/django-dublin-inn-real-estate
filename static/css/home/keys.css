@@ -87,6 +87,10 @@
         flex-direction: column;
     }
 
+    .keys-content h2 {
+        font-size: 3rem;
+    }
+
     .keys-benefits p {
         margin-bottom: 16px;
     }
