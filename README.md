@@ -18,10 +18,30 @@
       - [Admin](#admin)
       - [Developer](#developer)
   - [Design Choices](#design-choices)
-    - [Fonts](#fonts)
-    - [Colours](#colours)
+    - [Typography](#typography)
+    - [Color palette](#color-palette)
 - [User Interface | UI](#user-interface--ui)
   - [Skeleton](#skeleton)
+- [Information Architecture](#information-architecture)
+  - [Data Storage](#data-storage)
+    - [Database schema](#database-schema)
+    - [User Table](#user-table)
+    - [Profile Table](#profile-table)
+    - [Property Table](#property-table)
+    - [County Table](#county-table)
+    - [District Table](#district-table)
+    - [Neighborhood Table](#neighborhood-table)
+    - [PropertyViewing Table](#propertyviewing-table)
+    - [PropertyViewingDate Table](#propertyviewingdate-table)
+    - [PropertyViewingTime Table](#propertyviewingtime-table)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks](#frameworks)
+  - [Libraries](#libraries)
+  - [Tools](#tools)
+  - [Acknowledgements](#acknowledgements)
+  - [Disclaimer](#disclaimer)
+  - [Author](#author)
 
 # Briefing
 
@@ -111,7 +131,7 @@ In the system, there will be the following user functionalities:
 
 ## Design Choices
 
-### Fonts
+### Typography
 
 As a primary font, I have chosen to use [Poppins](https://fonts.google.com/specimen/Poppins) as it has a geometric in style, clean, and includes 18 different font weights, from thin to black. Also, Poppins is great for both headlines and paragraph copy to improve readability and style.
 
@@ -121,7 +141,7 @@ For the Logo I have chosen to use [Gorditas](https://fonts.google.com/specimen/G
 
 <img src="./readme-files/imgs/typography.jpg"/>
 
-### Colours
+### Color palette
 
 Talking to the marketing team at **Dublin Inn Real Estate**, they informed me that the CEO would like the site to have references to the colors of the Irish flag.
 
@@ -141,5 +161,215 @@ The wireframes were created in [Figma](https://www.figma.com/) which can be expl
 
 <div style="text-align: center;">
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" 
-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1"></iframe>
 </div>
+
+# Information Architecture
+
+## Data Storage
+
+### Database schema
+
+<img src="./readme-files/imgs/db_schema.png">
+
+
+### User Table
+
+| Title          | Key In Database | Form Validation           | Data Type   |
+| -------------- | --------------- | ------------------------- | ----------- |
+| id             | id              | No Validation             | Primary Key |
+| Username       | username        | max_length 20             | CharField   |
+| First Name     | first_name      | max_lenght 20             | CharField   |
+| Last Name      | last_name       | max_lenght 20             | CharField   |
+| E-mail Address | email           | Must contain @ & .com etc | Email       |
+| Password       | password        | max length 50             | CharField   |
+
+
+### Profile Table
+
+Once a user registers in the system, a profile is automatically created for that user.
+
+| Title            | Key In Database  | Form Validation                     | Data Type       |
+| ---------------- | ---------------- | ----------------------------------- | --------------- |
+| Id               | id               | No Validation                       | Primary Key     |
+| user             | user             | max length 50                       | Foreign Key     |
+| Role             | role             | choices=ROLE_CHOICE*, default=2     | IntegerField    |
+| Date of Birthday | date_of_birthday | default=None, null=True, blank=True | DateTimeField   |
+| Created at       | created_at       | auto_now_add=True                   | DateTimeField   |
+| Updated at       | updated_at       | auto_now_add=True                   | DateTimeField   |
+| Token            | token            | max_length=255                      | CharField       |
+| Avatar           | avatar           | default='placeholder'               | ImageField      |
+| Favourites       | favourites       | blank=True                          | ManyToManyField |
+
+* ROLE_CHOICE = (
+    (1, 'Admin'),
+    (2, 'Client'),
+    (3, 'Agent')
+)
+
+
+### Property Table
+
+|       Title       |  Key In Database  |             Form Validation             |    Data Type    |
+| :---------------: | :---------------: | :-------------------------------------: | :-------------: |
+|        Id         |        id         |              No Validation              |   Primary Key   |
+|   Property Name   |   property_name   | max_length=50, null=False, unique=True  |    CharField    |
+|       Slug        |       slug        | max_length=100, null=False, unique=True |    SlugField    |
+| Property Address  | property_address  |             max_length=255              |    CharField    |
+|   Neighborhood    |   neighborhood    |                null=True                |   Foreign Key   |
+|     District      |     district      |              No Validation              |   Foreign Key   |
+|       Image       |       image       |               blank=True                | ManyToManyField |
+| Property Category | property_category |  choices=PROPERTY_CATEGORY*, default=2  |  IntegerField   |
+|   Property Type   |   property_type   |    choices=PROPERTY_TYPE*, default=1    |  IntegerField   |
+|  Property Price   |  property_price   |              No Validation              |  IntegerField   |
+|     Bedrooms      |     bedrooms      |              No Validation              |  IntegerField   |
+|     Bathrooms     |     bathrooms     |              No Validation              |  IntegerField   |
+|     Metreage      |     metreage      |              No Validation              |   FloatField    |
+|   Viewing Date    |   viewing_date    |              No Validation              | ManyToManyField |
+|   Viewing Time    |   viewing_time    |              No Validation              | ManyToManyField |
+|    Created at     |    created_at     |            auto_now_add=True            |  DateTimeField  |
+|    Updated at     |    updated_at     |            auto_now_add=True            |  DateTimeField  |
+
+
+* PROPERTY_CATEGORY = (
+    (1, 'Sale'),
+    (2, 'Rent')
+)
+
+
+* PROPERTY_TYPE = (
+    (1, 'Studio'),
+    (2, 'Apartment'),
+    (3, 'House')
+)
+
+
+### County Table
+
+| Title      | Key in Database | Form Validation   | Data Type     |
+| ---------- | --------------- | ----------------- | ------------- |
+| Id         | id              | No Validation     | Primary Key   |
+| Name       | name            | max length 50     | CharField     |
+| Created at | created_at      | auto_now_add=True | DateTimeField |
+| Updated at | updated_at      | auto_now_add=True | DateTimeField |
+
+
+### District Table
+
+| Title      | Key in Database | Form Validation           | Data Type     |
+| ---------- | --------------- | ------------------------- | ------------- |
+| Id         | id              | No Validation             | Primary Key   |
+| Name       | name            | max length 50             | CharField     |
+| County     | county          | on_delete=models.SET_NULL | Foreign Key   |
+| Created at | created_at      | auto_now_add=True         | DateTimeField |
+| Updated at | updated_at      | auto_now_add=True         | DateTimeField |
+
+
+### Neighborhood Table
+
+| Title      | Key in Database | Form Validation           | Data Type     |
+| ---------- | --------------- | ------------------------- | ------------- |
+| Id         | id              | No Validation             | Primary Key   |
+| Name       | name            | max length 50             | CharField     |
+| District   | district        | on_delete=models.SET_NULL | Foreign Key   |
+| Created at | created_at      | auto_now_add=True         | DateTimeField |
+| Updated at | updated_at      | auto_now_add=True         | DateTimeField |
+
+
+### PropertyViewing Table
+
+| Title            | Key In Database  | Form Validation                    | Data Type     |
+| ---------------- | ---------------- | ---------------------------------- | ------------- |
+| Id               | id               | No Validation                      | Primary Key   |
+| Property         | property         | on_delete=models.SET_NULL          | Foreign Key   |
+| User             | user             | on_delete=models.SET_NULL          | Foreign Key   |
+| Day for viewing  | day_for_viewing  | null=False, max_length=20          | CharField     |
+| Time for viewing | time_for_viewing | No Validation                      | TimeField     |
+| Status           | status           | choices=VIEWING_STATUS*, default=1 | IntegerField  |
+| Created at       | created_at       | auto_now_add=True                  | DateTimeField |
+| Updated at       | updated_at       | auto_now_add=True                  | DateTimeField |
+
+
+* VIEWING_STATUS = (
+    (1, 'Scheduled'),
+    (2, 'Cancelled')
+)
+
+### PropertyViewingDate Table
+
+| Title           | Key in Database | Form Validation           | Data Type     |
+| --------------- | --------------- | ------------------------- | ------------- |
+| Id              | id              | No Validation             | Primary Key   |
+| Day for viewing | day_for_viewing | null=False, max_length=20 | CharField     |
+| Created at      | created_at      | auto_now_add=True         | DateTimeField |
+| Updated at      | updated_at      | auto_now_add=True         | DateTimeField |
+
+### PropertyViewingTime Table
+
+| Title            | Key in Database  | Form Validation   | Data Type     |
+| ---------------- | ---------------- | ----------------- | ------------- |
+| Id               | id               | No Validation     | Primary Key   |
+| Time for viewing | time_for_viewing | No Validation     | TimeField     |
+| Created at       | created_at       | auto_now_add=True | DateTimeField |
+| Updated at       | updated_at       | auto_now_add=True | DateTimeField |
+
+
+[Back to top ⇧](#table-of-contents)
+
+
+# Technologies Used
+
+## Languages
+
+1. **HTML5, or Hyper Text Markup Language:** Used to construct the page within this app -   
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+2. **CSS3, or Cascading Style Sheets:** Used to style the various elements on the app's pages via coloring, fonts, spacing, etc. - 
+https://www.w3.org/Style/CSS/Overview.en.html
+
+3. **Javascript:** Used to create iterations across the page. - https://www.javascript.com/
+
+4. **Python:** Used to develop all application logic. (https://www.python.org/)
+
+## Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Jquery](https://jquery.com/)
+
+## Libraries
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+## Tools
+
+- [Heroku](https://www.heroku.com)
+- [Git](https://git-scm.com/)
+- [Postgres](https://www.postgresql.org/)
+- [Db Diagram](https://dbdiagram.io/home)
+- [Figma](https://figma.com)
+
+
+[Back to top ⇧](#table-of-contents)
+
+## Acknowledgements
+
+I would like to take the opportunity to thank:
+
+ - To God first, to my family, friends and colleagues for their advice, support and help with testing.
+ - To my mentors Felipe Alarcon & Richard Wells for their feedback, advices, support and, above all, for their patience.
+ - All Code Institute Tutors and Community on Slack for the peer reviews and advice.
+
+
+## Disclaimer
+
+> ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
+
+> **For educational purposes only.
+
+## Author
+
+Made with ❤️ by <b>Emidio Valereto</b> <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="16px"> Get in touch!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Emidio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/emidiovalereto/)](https://www.linkedin.com/in/emidiovalereto/) [![Gmail Badge](https://img.shields.io/badge/-emidio.valereto@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:emidio.valereto@gmail.com)](mailto:emidio.valereto@gmail.com)
+
+[Back to top ⇧](#table-of-contents)
