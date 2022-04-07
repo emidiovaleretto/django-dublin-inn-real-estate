@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}500 Internal Server Error{% endblock %}
+
+{% block content %}
+<body style="background: white;">
+    <section class="_404-page">
+        <div class="social-login container">
+            <div class="_404-bg">
+                <h1 class="font-p-xxl gray-10">500 | Internal Server Error</h1>
+            </div>
+            <p class="font-f-m gray-9">Something just isn't right but don't worry! It's on our side. I suggest come back later.</p>
+            <a class="button" href="{% url 'index' %}">Back to Home</a>
+        </div>
+    </section>
+</body>
+{% endblock %}
