@@ -39,9 +39,9 @@
   - [Frameworks](#frameworks)
   - [Libraries](#libraries)
   - [Tools](#tools)
-  - [Acknowledgements](#acknowledgements)
-  - [Disclaimer](#disclaimer)
-  - [Author](#author)
+- [Acknowledgements](#acknowledgements)
+- [Disclaimer](#disclaimer)
+- [Author](#author)
 
 # Briefing
 
@@ -157,11 +157,12 @@ With this information I have chosen to use the following colours to provide a gr
 
 ## Skeleton
 
-The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details below 👇
+The wireframes were created in [Figma](https://www.figma.com/) which can be explored in details by clicking on the image below 👇
 
 <div style="text-align: center;">
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="600" 
-src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKoyTeoW0AqOFKs9dxQ0u1R%2FDublin-Inn-Real-Estate%3Fnode-id%3D0%253A1"></iframe>
+  <a href="https://www.figma.com/file/KoyTeoW0AqOFKs9dxQ0u1R/Dublin-Inn-Real-Estate?node-id=0%3A1">
+    <img src="./readme-files/imgs/mockup_figma.jpg" alt="Mockup Figma">
+  </a>
 </div>
 
 # Information Architecture
@@ -351,7 +352,7 @@ https://www.w3.org/Style/CSS/Overview.en.html
 
 [Back to top ⇧](#table-of-contents)
 
-## Acknowledgements
+# Acknowledgements
 
 I would like to take the opportunity to thank:
 
@@ -360,13 +361,13 @@ I would like to take the opportunity to thank:
  - All Code Institute Tutors and Community on Slack for the peer reviews and advice.
 
 
-## Disclaimer
+# Disclaimer
 
 > ****Disclaimer***: The following Context is completely fictional, the company, the context, the CEO, the business questions exist only in my imagination.
 
 > **For educational purposes only.
 
-## Author
+# Author
 
 Made with ❤️ by <b>Emidio Valereto</b> <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="16px"> Get in touch!
 
