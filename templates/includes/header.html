@@ -19,7 +19,11 @@
                             <img class="avatar" src="{{ profile.avatar.url }}" alt="User Picture Profile">
                         {% endif %}
                     <div class="dropdown">
+                    {% if user.first_name %}
                         <span class="font-p-s white">{{ user.first_name }}</span>
+                    {% else %}
+                    <span class="font-p-s white">{{ user.username }}</span>
+                    {% endif %}
                         <div class="dropdown-content black">
                         {% if user.is_staff %}
                             <a href="#">Profile</a>
