@@ -27,7 +27,7 @@
                         <div class="dropdown-content black">
                         {% if user.is_staff %}
                             <a href="#">Profile</a>
-                            <a href="#">Admin panel</a>
+                            <a href="{% url 'admin_panel' %}">Admin panel</a>
                             <a href="{% url 'account_logout' %}">Sign out</a>
                         {% else %}
                             <a href="#">Profile</a>
