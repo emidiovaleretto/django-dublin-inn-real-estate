@@ -20,7 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('auth/', include('allauth.urls')),
+    path('user/', include('user.urls')),
     path('properties/', include('property.urls')),
-    path('properties/<slug:slug>/booking-a-viewing/', include('scheduling.urls')),
+    path('properties/<slug:slug>/booking-a-viewing/',
+         include('scheduling.urls')),
     path('my-schedule-visits/', include('myScheduledVisits.urls')),
 ]
