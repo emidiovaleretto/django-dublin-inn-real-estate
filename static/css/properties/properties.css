@@ -92,6 +92,11 @@
     margin-right: 8px;
 }
 
+.property-content div {
+    display: flex;
+    gap: 12px;
+}
+
 .properties-bg:last-child {
     margin-bottom: 60px;
 }
