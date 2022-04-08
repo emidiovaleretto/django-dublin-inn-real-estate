@@ -1,0 +1,18 @@
+{% load static %}
+<div id="btnModal" class="modal">
+    <span onclick="document.getElementById('btnModal').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+    <form class="modal-content" action="">
+        <div class="box">
+            <h2 class="font-p-xxl gray-10">Delete</h2>
+            <p class="font-f-l-b gray-8">Are you sure you want to delete this property?</p>
+            <p class="errors font-p-m-b">Unexpected bad things will happen if you don't read this.</p>
+            <p class="font-f-l gray-9">This action <span class="underline">CANNOT</span> be undone!</p>
+
+            <div class="btn-container">
+                <button type="button" class="button">Cancel</button>
+                <button type="button" class="button cancelled outline">Delete</button>
+            </div>
+        </div>
+    </form>
+</div>
