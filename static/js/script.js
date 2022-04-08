@@ -43,3 +43,13 @@ galery.forEach((img) => {
         }
     });
 });
+
+// Modal
+
+let modal = document.getElementById('btnModal');
+
+onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
