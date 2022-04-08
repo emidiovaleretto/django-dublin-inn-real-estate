@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Manage properties | Dulin Inn Real Estate{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="title-bg">
+        <div class="title container">
+            <p class="font-f-l gray-3">Welcome back, {{ request.user }}</p>
+            <h1 class="font-p-xxl white">Manage properties<span class="primary-color-7">.</span></h1>
+        </div>
+    </div>
+
+    {% for property in properties %}
+    <div class="properties-bg">
+        <div class="properties container">
+            <div class="property-image">
+                {% if 'placeholder' in property.image.url %}
+                    <img src="https://res.cloudinary.com/emidio-cloud/image/upload/v1647215529/placeholder_image_tb855k.png" 
+                        alt="Placeholder image">
+                {% else %}
+                <a href="{% url 'property_detail' property.slug %}">
+                    <img src="{{ property.image.all.0.image.url }}" alt="Property 1">
+                </a>
+                {% endif %}
+                <span class="font-f-m white">&#8364 {{ property.property_price }}</span>
+            </div>
+            <div class="property-content">
+                <h2 class="font-p-xl gray-10">{{ property.property_name }}</h2>
+                <p class="font-f-s gray-8">{{ property.description }}</p>
+                <ul class="font-p-m gray-8">
+                    <li>
+                        <img src="{% static 'img/icons/icon-bed.svg' %}" alt="">
+                        {{ property.bedrooms }} bedrooms
+                    </li>
+                    <li>
+                        <img src="{% static 'img/icons/icon-bathtub.svg' %}" alt="">
+                        {{ property.bathrooms }} bathrooms
+                    </li>
+                    <li>
+                        <img src="{% static 'img/icons/icon-measures.svg' %}" alt="">
+                        {{ property.metreage }}m²
+                    </li>
+                </ul>
+                <div>
+                    <a href="" class="button">Edit</a>
+                    <a href="" class="button cancelled">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+
+{% include 'includes/pagination.html' %}
+
+{% endblock %}
