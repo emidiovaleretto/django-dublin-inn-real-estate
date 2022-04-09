@@ -1,3 +1,56 @@
+/* Inputs */
+
+textarea,
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=date] {
+    font: 400 1rem/1.5 "Fira Sans", sans-serif;
+    background-color: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    padding: 12px;
+    margin-left: 0;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=date]:focus {
+    outline: none;
+    border-color: var(--primary-color-7);
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+select {
+    padding: 16px;
+    background: var(--gray-1);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-color-7);
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+/* Buttons */
+
 .button {
     display: inline-block;
     padding: 16px 32px;
@@ -41,6 +94,13 @@
     background-color: var(--primary-color-6);
 }
 
+.cancelled {
+    background-color: #ff0000;
+}
+
+
+/* Links */
+
 .link {
     display: inline-block;
     color: var(--primary-color-5);
@@ -49,7 +109,7 @@
 }
 
 .link::after {
-    content:'';
+    content: '';
     display: block;
     height: 4px;
     width: 100%;
@@ -60,11 +120,9 @@
     color: var(--primary-color-6);
 }
 
-.cancelled {
-    background-color: #ff0000;
-}
+/* Error Messages */
 
-.errors{
+.errors {
     font: 300 0.875rem/1.5 "Fira Sans", sans-serif;
     color: var(--gray-11);
     border: 1px solid var(--gray-3);
@@ -76,4 +134,17 @@
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
     background-color: #fea;
+}
+
+@media (max-width: 800px) {
+
+    select,
+    textarea,
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    input[type=tel],
+    input[type=date] {
+        width: 100%;
+    }
 }
