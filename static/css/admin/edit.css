@@ -6,3 +6,8 @@
 #edit .schedule-form {
     margin-top: 16px;
 }
+
+#edit .schedule-form select {
+    font: 400 1rem/1.5 "Fira Sans", sans-serif;
+    width: 100%;
+}
