@@ -191,36 +191,11 @@
     grid-column: 1 / -1;
 }
 
-.schedule-form input[type=text],
-.schedule-form input[type=email],
-.schedule-form input[type=tel],
-.schedule-form input[type=date] {
-    font: 400 1rem/1.5 "Fira Sans", sans-serif;
-    background-color: var(--gray-1);
-    border: 1px solid var(--gray-2);
-    padding: 12px;
-    margin-left: 0;
-    border-radius: 4px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.schedule-form input[type=text]:focus,
-.schedule-form input[type=email]:focus,
-.schedule-form input[type=tel]:focus,
-.schedule-form input[type=date]:focus {
-    outline: none;
-    border-color: var(--primary-color-7);
-    background-color: var(--white);
-    box-shadow: 0 0 0 2px #fea;
-}
-
-.schedule-form input[type=tel] {
+input[type=tel] {
     margin-bottom: 60px;
 }
 
-.schedule-form input[type=checkbox] {
+input[type=checkbox] {
     margin-bottom: 20px;
     width: 16px;
     height: 16px;
