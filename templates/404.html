@@ -4,15 +4,13 @@
 {% block title %}404 Page Not Found{% endblock %}
 
 {% block content %}
-<body style="background: white;">
-    <section class="_404-page">
-        <div class="social-login container">
-            <div class="_404-bg">
-                <h1 class="font-p-xxl gray-10">Whoops! Not found!</h1>
-            </div>
-            <p class="font-f-m gray-9">Sorry, we're still haven't found what you're looking for.</p>
-            <a class="button" href="{% url 'index' %}">Back to Home</a>
+<body id="_404_page">
+    <div class="social-login container">
+        <div class="_404-bg">
+            <h1 class="font-p-xxl gray-10">Whoops! Not found!</h1>
         </div>
-    </section>
+        <p class="font-f-m gray-9">Sorry, we're still haven't found what you're looking for.</p>
+        <a class="button" href="{% url 'index' %}">Back to Home</a>
+    </div>
 </body>
 {% endblock %}

@@ -113,8 +113,8 @@
     padding: 60px;
 }
 
-._404-page {
-    background: var(--white);
+body#_404_page {
+    background-color: var(--white);
 }
 
 ._404-bg {
