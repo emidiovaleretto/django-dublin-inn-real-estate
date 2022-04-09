@@ -53,3 +53,22 @@ onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+// This function handles the click event on the dropdown button
+
+function openDropdown() {
+    document.getElementById("dropdown").classList.toggle("show");
+}
+
+onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
