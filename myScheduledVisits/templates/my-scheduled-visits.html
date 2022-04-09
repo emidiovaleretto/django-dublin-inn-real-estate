@@ -27,7 +27,7 @@
         <p class="font-f-s gray-10">{{ appointment.day_for_viewing }} - {{ appointment.time_for_viewing }}</p>
         {% if appointment.status == 1 %}
         <a class="button">Scheduled</a>
-        <a href="{% url 'cancellation' appointment.id %}" class="button cancelled">Cancel</a>
+        <a href="javascript:void(0)" class="button cancelled" onclick="document.getElementById('btnModal').style.display='block'">Cancel<a>
         {% elif appointment.status == 2 %}
         <a class="button cancelled">Cancelled</a>
         {% endif %}
@@ -35,6 +35,7 @@
     {% endfor %}
 </div>
 
+{% include 'includes/modal.html' %}
 {% include 'includes/pagination.html' %}
 
 {% endblock %}
