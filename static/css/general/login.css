@@ -113,19 +113,6 @@
     padding: 60px;
 }
 
-body#_404_page {
-    background-color: var(--white);
-}
-
-._404-bg {
-    background: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif") no-repeat center;
-    height: 400px;
-}
-
-._404-bg h1 {
-    text-align: center;
-}
-
 .social-login p {
     margin-bottom: 40px;
 }
@@ -139,6 +126,57 @@ body#_404_page {
 .social-login a.button:hover {
     color: var(--white);
     background: var(--primary-color-5);
+}
+
+/* Reset Password */
+
+.reset {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    margin: 60px auto;
+    padding: 60px;
+}
+
+.reset form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reset form input[type=email] {
+    font: 400 1rem/1.5 "Fira Sans", sans-serif;
+    background-color: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    padding: 12px;
+    margin-left: 0;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reset form input[type=email]:focus {
+    outline: none;
+    border-color: var(--primary-color-7);
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px #fea;
+}
+
+/* 404 page */
+
+body#_404_page {
+    background-color: var(--white);
+}
+
+._404-bg {
+    background: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif") no-repeat center;
+    height: 400px;
+}
+
+._404-bg h1 {
+    text-align: center;
 }
 
 @media (max-width: 1200px) {
