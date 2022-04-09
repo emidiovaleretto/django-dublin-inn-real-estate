@@ -40,58 +40,6 @@
     background-color: var(--primary-color-5);
 }
 
-.edit-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.edit-dropdown__content {
-    display: none;
-    position: absolute;
-    background-color: var(--gray-2);
-    min-width: 160px;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    left: -50px;
-    top: 10px;
-}
-
-.edit-dropdown__content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.edit-dropdown__content a:hover {
-    color: var(--white);
-    border-radius: 0 0 4px 4px;
-}
-
-.edit-dropdown__content a::after {
-    display: none;
-}
-
-.edit-dropdown:hover .edit-dropdown__content  {
-    display: block;
-}
-
-.edit-dropdown span {
-    position: relative;
-}
-
-.edit-dropdown span::after {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: url('../../img/icons/ellipsis-solid.svg') no-repeat;
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    cursor: pointer;
-}
-
 .cancelled,
 .cancelled:hover {
     background-color: var(--red-button);
