@@ -7,4 +7,5 @@ urlpatterns = [
     path('admin-panel/edit/<slug:slug>',
          views.edit_property,
          name='edit_property'),
+    path('admin-panel/edit/<slug:slug>/update_property', views.update_property, name='update_property'),
 ]
