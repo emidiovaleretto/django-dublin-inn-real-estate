@@ -42,11 +42,11 @@
 				<label for="property-address">Property Address</label>
 				<input type="text" id="property-address" name="property-address" value="{{ property.property_address }}" disabled>
 			</div>
-			<div class="col-2">
+			<div>
 				<label for="neighborhood">Neighborhood</label>
 				<input type="text" id="neighborhood" name="neighborhood" value="{{ property.neighborhood }}" disabled>
 			</div>
-			<div class="col-2">
+			<div>
 				<label for="district">District</label>
 				<input type="text" id="district" name="district" value="{{ property.district }}" disabled>
 			</div>
@@ -56,16 +56,16 @@
 			</div>
 			<div class="col-2">
 				<label for="description">Description</label>
-				<textarea id="description" name="description" cols="30" rows="10">{{ property.description }}</textarea>
+				<textarea id="description" name="description" maxlength="255" cols="20" rows="6">{{ property.description }}</textarea>
 			</div>
-			<div class="col-2">
+			<div>
 				<select name="property-category" id="property-category" class="property-category font-f-xs gray-9">
 					<option value="">Property Category</option>
 					<option value="1">Rent</option>
 					<option value="2">Sale</option>
 				</select>
 			</div>
-			<div class="col-2">
+			<div>
 				<select name="property-type" id="property-type" class="property-type font-f-xs gray-9">
 					<option value="">Property Type</option>
 					<option value="1">Studio</option>
@@ -73,40 +73,39 @@
 					<option value="3">House</option>
 				</select>
 			</div>
-			<div class="col-2">
+			<div>
 				<label for="property-price">Property Price</label>
 				<input type="number" id="property-price" name="property-price" value="{{ property.property_price }}">
 			</div>
-			<div class="col-2">
+			<div>
 				<label for="bedrooms">Bedrooms</label>
 				<input type="number" id="bedrooms" name="bedrooms" value="{{ property.bedrooms }}">
 			</div>
-			<div class="col-2">
+			<div>
 				<label for="bathrooms">Bathrooms</label>
 				<input type="number" id="bathrooms" name="bathrooms" value="{{ property.bathrooms }}">
 			</div>
-			<div class="col-2">
+			<div>
 				<label for="metreage">Metreage</label>
 				<input type="number" id="metreage" name="metreage" value="{{ property.metreage }}">
 			</div>
-			<div class="col-2">
-				<label for="property-price">Property Price</label>
-				<input type="number" id="property-price" name="property-price" value="{{ property.property_price }}">
-			</div>
-			<div class="col-2">
+			<div>
+				<label for="viewing-date">Viewing dates*</label>
 				<select name="viewing-date" id="viewing-date" class="viewing-date font-f-xs gray-9" multiple>
                     {% for date in property.viewing_date.all %}
                         <option value="{{ date }}">{{ date }}</option>
                     {% endfor %}
 				</select>
 			</div>
-			<div class="col-2">
+			<div>
+				<label for="viewing-time">Viewing times*</label>
 				<select name="viewing-time" id="viewing-time" class="viewing-time font-f-xs gray-9" multiple>
                     {% for time in property.viewing_time.all %}
                         <option value="{{ time }}">{{ time }}</option>
                     {% endfor %}
 				</select>
 			</div>
+			<p class="font-f-s gray-8 col-2">*Hold the CTRL key and click the items in a list to choose them.</p>
 
 			<button class="button col-2" type="submit">Save</button>
 		</div>
