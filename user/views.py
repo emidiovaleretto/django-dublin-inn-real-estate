@@ -15,7 +15,7 @@ def user_profile(request):
     profile.save()
     context = {'profile': profile}
     return render(request, 'user_profile.html', context=context)
-    
+
 
 @login_required(login_url='/auth/login')
 def admin_panel(request):
@@ -33,7 +33,19 @@ def admin_panel(request):
         'profile': profile,
         'properties': per_page,
         'pagination': per_page,
-    }    
-    
+    }
+
     return render(request, 'admin_panel.html', context=context)
 
+
+@login_required(login_url='/auth/login')
+def edit_property(request, slug):
+    ''' This function returns the edit property page '''
+    property = get_object_or_404(Property.objects.filter(slug=slug))
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+    else:
+        profile = Profile.objects.all()
+
+    context = {'property': property, 'profile': profile}
+    return render(request, 'edit_property.html', context=context)
