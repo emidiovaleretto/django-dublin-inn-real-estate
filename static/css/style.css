@@ -9,6 +9,7 @@
 @import "./general/footer.css";
 @import "./general/login.css";
 @import "./general/signup.css";
+@import "./general/modal.css";
 
 /* Utilities */
 @import "./utilities/components.css";
