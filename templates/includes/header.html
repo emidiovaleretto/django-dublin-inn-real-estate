@@ -20,11 +20,11 @@
                         {% endif %}
                     <div class="dropdown">
                     {% if user.first_name %}
-                        <span class="font-p-s white">{{ user.first_name }}</span>
+                        <button title="Open dropdown menu" onclick="openDropdown()" class="font-p-s white dropbtn">{{ user.first_name }}</button>
                     {% else %}
-                    <span class="font-p-s white">{{ user.username }}</span>
+                        <button title="Open dropdown menu" onclick="openDropdown()" class="font-p-s white dropbtn">{{ user.username }}</button>
                     {% endif %}
-                        <div class="dropdown-content black">
+                        <div id="dropdown" class="dropdown-content black">
                         {% if user.is_staff %}
                             <a href="#">Profile</a>
                             <a href="{% url 'admin_panel' %}">Admin panel</a>

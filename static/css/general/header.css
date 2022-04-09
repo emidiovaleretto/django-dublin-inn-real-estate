@@ -85,15 +85,23 @@
     display: none;
 }
 
-.dropdown:hover .dropdown-content {
+.dropbtn {
+    background-color: transparent;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    text-decoration: underline;
+}
+
+.show {
     display: block;
 }
 
-.dropdown span {
-    position: relative;
-}
-
-.dropdown span::after {
+.dropbtn::after {
     content: '';
     display: inline-block;
     width: 16px;
@@ -101,7 +109,7 @@
     margin-left: 6px;
     background: url('../../img/icons/angle-down-solid.svg') no-repeat;
     position: absolute;
-    top: 4px;
+    top: 12px;
     right: -20px;
 }
 
@@ -163,7 +171,7 @@
         margin-right: 40px;
         flex-direction: column;
     }
-    
+
     .dropdown a:hover {
         background-color: transparent;
     }
