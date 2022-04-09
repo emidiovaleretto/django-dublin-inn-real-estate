@@ -3,6 +3,9 @@
 
 /* CSS stylesheets */
 
+/* Admin */
+@import "./admin/edit.css";
+
 /* General */
 @import "./general/general.css";
 @import "./general/header.css";
