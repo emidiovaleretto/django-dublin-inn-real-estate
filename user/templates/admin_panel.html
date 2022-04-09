@@ -8,7 +8,7 @@
 <main>
     <div class="title-bg">
         <div class="title container">
-            <p class="font-f-l gray-3">Welcome back, {{ request.user }}.</p>
+            <p class="font-f-l gray-3">Welcome back, {{ request.user.first_name }}.</p>
             <h1 class="font-p-xxl white">Manage properties<span class="primary-color-7">.</span></h1>
         </div>
     </div>
@@ -45,7 +45,7 @@
                     </li>
                 </ul>
                 <div>
-                    <a href="" class="button">Edit</a>
+                    <a href="{% url 'edit_property' property.slug %}" class="button">Edit</a>
                     <a href="javascript:void(0)" class="button cancelled" onclick="document.getElementById('btnModal').style.display='block'">Delete</a>
                 </div>
             </div>
