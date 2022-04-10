@@ -53,13 +53,13 @@
 - [Testing](#testing)
   - [Bugs](#bugs)
   - [Unsolved Issues](#unsolved-issues)
-  - [Deployment](#deployment)
-    - [Forking the GitHub Repository and Running this Project Locally](#forking-the-github-repository-and-running-this-project-locally)
-      - [Installing virtualenv](#installing-virtualenv)
-      - [Creating a new virtualenv](#creating-a-new-virtualenv)
-      - [Activating a virtualenv](#activating-a-virtualenv)
-    - [Database setup](#database-setup)
-    - [Setting up heroku](#setting-up-heroku)
+- [Deployment](#deployment)
+  - [Forking the GitHub Repository and Running this Project Locally](#forking-the-github-repository-and-running-this-project-locally)
+    - [Installing virtualenv](#installing-virtualenv)
+    - [Creating a new virtualenv](#creating-a-new-virtualenv)
+    - [Activating a virtualenv](#activating-a-virtualenv)
+  - [Database setup](#database-setup)
+  - [Setting up heroku](#setting-up-heroku)
 - [Credits](#credits)
   - [Media](#media)
 - [Acknowledgements](#acknowledgements)
@@ -582,9 +582,9 @@ https://www.w3.org/Style/CSS/Overview.en.html
 
 The only known thing, but that is still present on the site, is that when the user searches for a property, passing **only** the **location** parameter, after the 'Dublin 7' area, the result presented does not correspond with the chosen localization. For example, if the user selects the search for Dublin 18, properties from other regions will appear. A different solution would need to be found on the backend to ensure this doesn't happen. I couldn't find a solution before the submission date of this project.
 
-## Deployment
+# Deployment
 
-### Forking the GitHub Repository and Running this Project Locally
+## Forking the GitHub Repository and Running this Project Locally
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original 
 repository by using the following steps...
@@ -599,7 +599,7 @@ repository by using the following steps...
 
   2. Ideally you will want to work within a virtual environment to allow all packages to be kept within the project, this can be installed using the following command (please note some IDE's require pip3 instead of pip, please check with the documentation for your chosen IDE). To create a virtual environment, run the command
 
-  #### Installing virtualenv
+  ### Installing virtualenv
 
   The installation of a virtualenv is done using pip, Python's package manager. It is with it that we install, remove and update packages in our projects. One note is that PIP is already installed when we are using IDE's like VSCode or PyCharm for our Python projects. So, just run the command below to install the virtualenv package on our computer: 
 
@@ -607,7 +607,7 @@ repository by using the following steps...
 
   Once this is done, the package will be installed and ready to be used. Now you can create and manage your virtual environments.
 
-  #### Creating a new virtualenv
+  ### Creating a new virtualenv
 
   The process of creating a virtualenv is quite simple and can be done using a single command, as seen below:
 
@@ -615,7 +615,7 @@ repository by using the following steps...
 
   *Hint: I usually choose to name my virtual environments after the project name, rather than just writing 'venv', for example, the project is called `MyBlogProject`, so the name of the virtual environment would be something like `myblogenv`. If you need to return to a certain project after a while, you'll easily find the respective environment for that project. But that is totally up to you.*
 
-  #### Activating a virtualenv
+  ### Activating a virtualenv
 
   After creating a virtualenv, it's needed to activate it so that you can install the necessary packages for the project. To do this, run the following command:
 
@@ -644,7 +644,7 @@ repository by using the following steps...
 
   ```
 
-### Database setup
+## Database setup
 
   1. To set up your database you will first need to run the following command:
 
@@ -677,7 +677,7 @@ repository by using the following steps...
   After running this command, all information contained in the `data.json` file will be saved in the database. Once that's done, run the `python3 manage.py runserver` command again and you should be able to see the application working.  
   
 
-### Setting up heroku
+## Setting up heroku
 
 To set up heroku you must:
 
