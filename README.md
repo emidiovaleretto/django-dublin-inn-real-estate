@@ -22,6 +22,12 @@
     - [Color palette](#color-palette)
 - [User Interface | UI](#user-interface--ui)
   - [Skeleton](#skeleton)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+    - [Search Filter](#search-filter)
+    - [View all available properties for rent](#view-all-available-properties-for-rent)
+    - [See more details about a property.](#see-more-details-about-a-property)
+    - [Interested in the property? Schedule a visit!](#interested-in-the-property-schedule-a-visit)
 - [Information Architecture](#information-architecture)
   - [Project settings files configuration structure](#project-settings-files-configuration-structure)
     - [Development environment](#development-environment)
@@ -43,6 +49,9 @@
   - [Frameworks](#frameworks)
   - [Libraries](#libraries)
   - [Tools](#tools)
+  - [Other Softwares](#other-softwares)
+- [Credits](#credits)
+  - [Media](#media)
 - [Acknowledgements](#acknowledgements)
 - [Disclaimer](#disclaimer)
 - [Author](#author)
@@ -169,6 +178,64 @@ The wireframes were created in [Figma](https://www.figma.com/) which can be expl
   </a>
 </div>
 
+# Features
+
+## Existing Features
+
+### Search Filter
+
+Right on the home page, the user will come across a form where he can search for properties according to location (area), type of property (studio, apartment or house) and price range (min and max).
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/search_form.jpg"/>
+</div>
+
+If the user hits directly on the 'search' button, without adding anything to the search, all properties registered in the system will be returned.
+
+### View all available properties for rent
+
+Still on the home page, the user has the presentation of the properties that are highlighted on the site. However, there is a 'View all' link just above, in the right corner, and when clicking the user will be directed to the properties listing page.
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/feature_properties.jpg"/>
+</div>
+
+### See more details about a property.
+
+In the list of properties, there is a summary about the property, such as the name of the property, monthly price and some characteristics such as the number of bedrooms, bathrooms, etc.
+
+The user can click on 'See more' to access the specific content of that property. A more detailed page will be presented showing more information about the property, in addition to a map with the location. It is worth mentioning that in this project, the map **is not dynamic**, that is, no API was consumed to return the real location since the property address **does not represent an existing address**.
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/see_more.jpg"/>
+</div>
+
+So, the user should see a page like that.
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/details.jpg"/>
+</div>
+
+### Interested in the property? Schedule a visit!
+
+As part of the request made by the CEO of **Dublin Inn Real Estate**, the site will have the option for the user to schedule a visit of a specific property. With that in mind, a 'Schedule your visit' button was developed, which is just below the property description.
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/schedule_btn.jpg"/>
+</div>
+
+Once this is done, the user will be directed to the scheduling form page, which will be as shown in the image below.
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/schedule_form.jpg"/>
+</div>
+
+Finally, all the schedules that that user has will be displayed. The user can still cancel the appointment if he is unable to attend the scheduled date and time.
+
+<div style="text-align: center;">
+  <img src="./readme-files/imgs/my_schedule_visits.jpg"/>
+</div>
+
 # Information Architecture
 
 ## Project settings files configuration structure
@@ -194,7 +261,7 @@ from .settings import *
 
 DEBUG = True
 
-SECRET_KEY = # past your own secret key here
+SECRET_KEY = os.environ.get("SECRET_KEY_DEVELOPMENT")
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 DATABASES = {
@@ -212,7 +279,7 @@ DATABASES = {
 from .settings import *
 
 DEBUG = True
-SECRET_KEY = # past your own secret key here
+SECRET_KEY = os.environ.get("SECRET_KEY_TESTING")
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 DATABASES = {
@@ -294,6 +361,10 @@ def main():
 If working in the development environment, add `.development` after `settings`. If working in the testing environment, add `.testing` and so on.
 
 Be sure to change it each time you are working in a different environment.
+
+With the project configured correctly, when running the application, you will see something similar to this.
+
+<img src="./readme-files/imgs/django_launch.png"/>
 
 ## Data Storage
 
@@ -468,6 +539,7 @@ https://www.w3.org/Style/CSS/Overview.en.html
 ## Libraries
 
 - [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Daft Listings](https://github.com/AnthonyBloomer/daftlistings)
 
 ## Tools
 
@@ -477,8 +549,22 @@ https://www.w3.org/Style/CSS/Overview.en.html
 - [Db Diagram](https://dbdiagram.io/home)
 - [Figma](https://figma.com)
 
+## Other Softwares
+
+1. **[Am I Responsive?](http://ami.responsivedesign.is/)** : was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
+
+2. **[Responsive Design Tester](https://www.responsivedesignchecker.com/)** : was used to see the responsivity throughout an array of devices (screen sizes) and resolutions. 
+
+3. **[Squoosh](https://squoosh.app/)** : was used to reduce the size of the images throughout the page.
+
 
 [Back to top ⇧](#table-of-contents)
+
+# Credits
+
+## Media
+
+   - All images were downloaded from the website [Pexels](https://www.pexels.com/).
 
 # Acknowledgements
 
