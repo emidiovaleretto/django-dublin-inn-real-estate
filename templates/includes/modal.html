@@ -2,7 +2,7 @@
 <div id="btnModal" class="modal">
     <span onclick="document.getElementById('btnModal').style.display='none'" class="close"
         title="Close Modal">&times;</span>
-    <form class="modal-content" action="">
+    <div class="modal-content">
         <div class="box">
             <h2 class="font-p-xxl gray-10">Delete</h2>
             <p class="font-f-l-b gray-8">Are you sure you want to delete this property?</p>
@@ -10,9 +10,9 @@
             <p class="font-f-l gray-9">This action <span class="underline">CANNOT</span> be undone!</p>
 
             <div class="btn-container">
-                <button type="button" class="button">Cancel</button>
-                <button type="button" class="button cancelled outline">Delete</button>
+                <a href="{% url 'admin_panel' %}" type="button" class="button">Cancel</a>
+                <a href="{% url 'delete_a_property' property.slug %}" type="button" class="button cancelled outline">Delete</a>
             </div>
         </div>
-    </form>
+    </div>
 </div>

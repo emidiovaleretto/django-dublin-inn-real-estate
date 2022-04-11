@@ -46,14 +46,14 @@
                 </ul>
                 <div>
                     <a href="{% url 'edit_property' property.slug %}" class="button">Edit</a>
-                    <a href="javascript:void(0)" class="button cancelled" onclick="document.getElementById('btnModal').style.display='block'">Delete</a>
+                    <a href="{% url 'delete_a_property' property.slug %}" class="button cancelled">Delete</a>
                 </div>
             </div>
         </div>
     </div>
     {% endfor %}
 </main>
-{% include 'includes/modal.html' %}
+
 {% include 'includes/pagination.html' %}
 
 {% endblock %}

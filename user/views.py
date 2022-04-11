@@ -38,6 +38,9 @@ def admin_panel(request):
         'pagination': per_page,
     }
 
+    if not properties.exists():
+        return render(request, '404.html', context=context)
+
     return render(request, 'admin_panel.html', context=context)
 
 
@@ -78,3 +81,10 @@ def update_property(request, slug):
     
     else:
         return render(request, 'edit_property.html')
+
+
+@login_required(login_url='auth/login')
+def delete_a_propety(request, slug):
+    property = get_object_or_404(Property, slug=slug)
+    property.delete()
+    return redirect('admin_panel')
