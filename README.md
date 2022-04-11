@@ -2,6 +2,10 @@
 
 # Dublin Inn Real Estate
 
+The live link can be found <a href="https://dublinnrealestate.herokuapp.com/" target="_blank" rel="noopener">here</a>.
+
+This project was created as part of the Full Stack Software Development course offered by Code Institute.
+
 # Table of Contents
 
 - [Dublin Inn Real Estate](#dublin-inn-real-estate)
@@ -775,7 +779,10 @@ To set up heroku you must:
 
 ## Media
 
-   - All images were downloaded from the website [Pexels](https://www.pexels.com/).
+   - [Pexels](https://www.pexels.com/) - All images were downloaded from the website.
+   - [Table of contents](https://ecotrust-canada.github.io/markdown-toc/)
+   - [Code Institute](https://codeinstitute.net/)
+
 
 # Acknowledgements
 
