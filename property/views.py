@@ -25,6 +25,9 @@ def property_list(request):
         'pagination': per_page,
     }
 
+    if not properties.exists():
+        return render(request, '404.html', context=context)
+        
     return render(request, 'properties.html', context=context)
 
 
