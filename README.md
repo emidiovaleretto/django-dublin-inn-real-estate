@@ -52,6 +52,7 @@
   - [Other Softwares](#other-softwares)
 - [Testing](#testing)
   - [Bugs](#bugs)
+  - [* <strong>Resolution</strong>✅: Added ACCOUNT_EMAIL_VERIFICATION = 'none' to settings.py to stop an e-mail verification trying to be sent.](#-resolution-added-account_email_verification--none-to-settingspy-to-stop-an-e-mail-verification-trying-to-be-sent)
   - [Unsolved Issues](#unsolved-issues)
 - [Deployment](#deployment)
   - [Forking the GitHub Repository and Running this Project Locally](#forking-the-github-repository-and-running-this-project-locally)
@@ -576,7 +577,70 @@ https://www.w3.org/Style/CSS/Overview.en.html
 
 # Testing
 
+Some manual tests were performed to ensure the correct functioning of the application.
+
+- <strong>Implementation</strong> 🔨:
+When I had set up the data.json and loaded into the database I could then view all available properties. That way, I could ensure all ones were loaded as expected and that properties information was visible when selected.
+
+- <strong>Test</strong> 🔎:
+To test this, I went through each property and loaded the its information page, then looked at changing the url to ensure each item was loading correctly
+
+- <strong>Result</strong> 🏆:
+All properties loaded as expected to the main store page. When amending the url all properties again loaded as expected. However, if I tried to access an property slug that didn't exist I was presented with a 404 page.
+
+- <strong>Verdict</strong> ✅:
+This test passed and no amendments were required.
+
+---
+
+- <strong>Implementation</strong> 🔨:
+As the user can only schedule for visiting a property, I wanted to ensure that the user must be logged in to complete the appointment.
+
+- <strong>Test</strong> 🔎:
+To test this I tried to schedule a visit to the property without being logged in. By clicking the 'schedule your visit' button, I was moved directly to the login page. Also, I tried to access the scheduling page directly from the URL and in the same way I was redirected to the login page.
+
+- <strong>Result</strong> 🏆:
+The login page was displayed right after I tried to schedule a visit without being properly logged in.
+
+- <strong>Verdict</strong> ✅:
+This test completed as expected without bugs.
+
+---
+
+- <strong>Implementation</strong> 🔨:
+To test the responsiveness of the site, the page was loaded on local mobile devices to check design choices.
+
+- <strong>Test</strong> 🔎:
+This test was performed by loading the site and navigating through each page. In addition, the part where the user can schedule a visit to a property was tested.
+
+- <strong>Result</strong> 🏆:
+Each page loaded and displayed correctly with the exception of an issue found in the responsive menu button. When clicking on the button, the user will see the menu opening on the side of the screen. However, when scrolling down the page, the button to close the menu will be at the top of the screen, thus forcing the user to scroll up and then close the menu.
+
+- <strong>Verdict</strong> ❌:
+This test was classed as a fail.
+
+---
+
+- <strong>Implementation</strong> 🔨:
+To make sure that the user can navigate the site easily, I have tested the navigation of all items, links, buttons, etc., in order to ensure that the user does not get lost within the application sessions.
+
+- <strong>Test</strong> 🔎:
+This test was performed in a systematic way, so that each page was navigated, clicked on all the links, in order to ensure that the user knew how to "find himself" within the site.
+
+- <strong>Result</strong> 🏆:
+Every page and link was checked and each provided a positive result, in no time was the user sent to an unexpected destination.
+
+- <strong>Verdict</strong> ✅:
+This test completed as expected without bugs.
+
+---
+
 ## Bugs
+
+* <strong>Problem</strong> 🐞: Account system failed to register user.
+* <strong>Cause</strong>🛠: As the sign up was intended to work without having to verify an e-mail address, when sign-up the process failed due to no e-mail setting being available.
+* <strong>Resolution</strong>✅: Added ACCOUNT_EMAIL_VERIFICATION = 'none' to settings.py to stop an e-mail verification trying to be sent.
+---
 
 ## Unsolved Issues
 
