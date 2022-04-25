@@ -27,7 +27,7 @@
         <p class="font-f-s gray-10">{{ appointment.day_for_viewing }} - {{ appointment.time_for_viewing }}</p>
         {% if appointment.status == 1 %}
         <a class="button">Scheduled</a>
-        <a href="{% url 'cancellation' property.id %}" class="button cancelled">Cancel<a>
+        <a href="{% url 'cancellation' appointment.id %}" class="button cancelled">Cancel<a>
         {% elif appointment.status == 2 %}
         <a class="button cancelled">Cancelled</a>
         {% endif %}
