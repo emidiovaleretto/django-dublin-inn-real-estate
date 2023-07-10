@@ -1,9 +1,14 @@
+import os
 from .settings import *
 from decouple import config
 
+if os.path.exists("env.py"):
+    import env
+
+
 DEBUG = True
-SECRET_KEY = config("SECRET_KEY_DEVELOPMENT")
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+SECRET_KEY = os.environ.get("SECRET_KEY_DEVELOPMENT")
+ALLOWED_HOSTS = [os.environ.get("DEVELOPMENT_HOST")]
 
 DATABASES = {
     'default': {
