@@ -131,7 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en'
 
-TIME_ZONE = 'Eire'
+TIME_ZONE = 'Europe/Dublin'
 
 USE_I18N = True
 
